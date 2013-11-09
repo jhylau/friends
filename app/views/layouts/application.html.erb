@@ -44,26 +44,37 @@
                     <li><a href="#">One more separated link</a></li>
                   </ul>
                 </li>
+                <% if user_signed_in? %>
+                  <li><%= link_to current_user.email, edit_user_registration_path %></li>
+                  <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+                <% else %>
+                  <li><%= link_to "Sign up", new_user_registration_path %></li>
+                  <li><%= link_to "Login", new_user_session_path %></li>
+                <% end %>
               </ul>
+            </div>
+            <div id="user_nav">
+
             </div>
           </div>
         </div>
       </div>
     </div>
 	<div class="container footer-fix">
-		<div class="row">
-		    <div class="span12">
-		    <% [:notice, :error, :alert].each do |level| %>
-		      <% unless flash[level].blank? %>
-		        <div class="alert <%= flash_class(level) %>">
-		          <a class="close" data-dismiss="alert">×</a>
-		          <%= content_tag :p, flash[level] %>
-		        </div>
-		      <% end %>
-		    <% end %>
-		    </div>
-		</div>
-	    <%= yield %>
+	   <%= yield %>
+        <div class="row">
+        <div class="col-lg-12">
+        <% [:notice, :error, :alert].each do |level| %>
+          <% unless flash[level].blank? %>
+            <div class="alert <%= flash_class(level) %>">
+              <a class="close" data-dismiss="alert">×</a>
+              <%= content_tag :p, flash[level] %>
+            </div>
+          <% end %>
+        <% end %>
+        </div>
+    </div>
+
 	 </div>
   <div class="navbar-fixed-bottom navbar footer">
       <div class="container">
