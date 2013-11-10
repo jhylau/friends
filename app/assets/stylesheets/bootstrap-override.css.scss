@@ -1,0 +1,16 @@
+div.row div.col-centered {
+	float: none;
+    margin: 0 auto;
+}
+
+div.navbar-fixed-top {
+	background-image: none;
+	background-color: white;
+	a.navbar-brand {
+		text-shadow: none !important;
+		color: #D54F37;
+	}
+	a:hover {
+		color: black;
+	}
+}

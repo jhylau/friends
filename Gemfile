@@ -22,6 +22,8 @@ gem 'unicorn'
 gem 'unicorn-rails'
 gem 'omniauth-twitter'
 gem 'pry'
+gem 'less-rails'
+gem 'therubyracer'
 
 # Gems used only for assets and not required
 # in production environments by default.

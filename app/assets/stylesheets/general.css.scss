@@ -1,12 +1,12 @@
-html, body {
+h1, h2, h3, h4, p {
 	color: #454343;
 	font-family: 'Source Sans Pro',sans-serif;
-	font-size: 17px;
 }
 
 body {
   padding-top: 50px;
   padding-bottom: 20px;
+  background-color: #e6e6e5;
 }
 
 
@@ -109,10 +109,14 @@ body {
 /* Landing page columns */
 
 div.row div.col-user {
+  background-color: white;
   text-align: center;
   border: solid 1px grey;
   img {
     width: 100px;
     height: 100px;
+  }
+  p {
+    color: #D54F37;
   }
 } 
