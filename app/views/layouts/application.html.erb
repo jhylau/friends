@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Friends</title>
+    <title>Social Innovation Network</title>
     <%= stylesheet_link_tag  "application" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
@@ -24,10 +24,10 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="/">Project name</a>
+        <a class="navbar-brand" href="/">Social Innovation</a>
       </div>
       <div class="navbar-collapse collapse">
-        <ul class="nav navbar-nav">
+        <ul class="nav navbar-nav pull-right">
         <% if user_signed_in? %>
               <li><%= link_to current_user.email, edit_user_registration_path %></li>
               <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>

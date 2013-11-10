@@ -105,3 +105,14 @@ body {
     margin-top: 120px;
   }
 }
+
+/* Landing page columns */
+
+div.row div.col-user {
+  text-align: center;
+  border: solid 1px grey;
+  img {
+    width: 100px;
+    height: 100px;
+  }
+} 
