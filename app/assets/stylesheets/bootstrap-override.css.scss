@@ -3,13 +3,20 @@ div.row div.col-centered {
     margin: 0 auto;
 }
 
-div.navbar-fixed-top {
+div.navbar-fixed-top.navbar {
 	background-image: none;
 	background-color: white;
-	a.navbar-brand {
+	a {
 		text-shadow: none !important;
-		color: #D54F37;
+		color: #AA3621;
 	}
+	li a {
+		color: #AA3621;
+	}
+	li a:hover {
+		color: black;
+	}
+
 	a:hover {
 		color: black;
 	}

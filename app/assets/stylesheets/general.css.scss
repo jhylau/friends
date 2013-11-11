@@ -109,9 +109,14 @@ body {
 /* Landing page columns */
 
 div.row div.col-user {
+  width: 275px;
   background-color: white;
   text-align: center;
-  border: solid 1px grey;
+  border: none;
+  margin-top: 14px;
+  margin-left: 7px;
+  margin-right: 7px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);;
   img {
     width: 100px;
     height: 100px;
