@@ -4,6 +4,7 @@ Friends::Application.routes.draw do
 
   root :controller => "home", :action => 'index'
 
+  resources :guides
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

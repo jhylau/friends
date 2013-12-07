@@ -1,6 +1,4 @@
-Carousel
-    ================================================== -->
-    <div id="myCarousel" class="carousel slide">
+    <div class="carousel">
       <!-- Indicators -->
       <div class="carousel-inner">
         <div class="item active">
@@ -9,7 +7,7 @@ Carousel
             <div class="carousel-caption">
               <h1>Evolve Travel</h1>
               <p>The authentic local experience</p>
-              <p>Sign up now to get exclusive access.  Limited spots available.</p>
+              <p>Sign up now to get your first tour for free.</p>
               <div class="input-group col-lg-4 col-lg-offset-4">
                 <input type="text" class="form-control">
                 <span class="input-group-addon signup-addon">GO</span>
@@ -17,7 +15,8 @@ Carousel
             </div>
           </div>
         </div>
-    </div><!-- /.carousel -->
+    </div>
+  </div><!-- /.carousel -->
  <!-- Marketing messaging and featurettes
     ================================================== -->
     <!-- Wrap the rest of the page in another container to center all the content. -->
@@ -27,22 +26,22 @@ Carousel
       <!-- Three columns of text below the carousel -->
       <div class="row">
         <div class="col-lg-4">
-          <img class="img-circle" src="http://placekitten.com/140/140" alt="Generic placeholder image">
+         <%= image_tag("bangkok_elephant.jpg",class:"img-circle img-landing" ) %>
           <h2>Local Guides</h2>
-          <p>We pair you up with a local guide for a day.  Together you will explore a foreign city.  <br>Our guides are selected from a pool of talented applicants.  Only the best and most passionate are accepted.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+          <p>Tour with the best local guides available.<br>Only the best and most passionate guides are listed here.</p>
+          <p><a class="btn btn-default" href="#" role="button">Find guides &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img class="img-circle" src="http://placekitten.com/140/140" alt="Generic placeholder image">
-          <h2>Different Prespective</h2>
-          <p>Spending too much time researching online for things to do?  Feeling confused about how to spend your precious vacation time? <br>We'll take care of that for you.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+          <%= image_tag("family_backpack.jpg",class:"img-circle img-landing" ) %>
+          <h2>Different Perspective</h2>
+          <p>Not sure how to spend your precious vacation time? We'll take care of that for you.  Our guides will offer you insider information on the hottest and most fun spots in town.</p>
+          <p><a class="btn btn-default" href="#" role="button">Learn more &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img class="img-circle" src="http://placekitten.com/140/140" alt="Generic placeholder image">
-          <h2>Awesome Day Tours</h2>
-          <p>We're here to empower your travel experience by offering you insider information on the hottest and most fun spots in town.  Through a short day tour, you will get to know the city through the eyes of a local.<br>A few hours with us and the rest our your trip will be smooth sailing.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+          <%= image_tag("singapore_skyline.jpg",class:"img-circle img-landing" ) %>
+          <h2>Custom Tours</h2>
+          <p>Seamless communication with your tour guide.  We're here to empower your travel experience by offering you insider information on the hottest and most fun spots in town.<br></p>
+          <p><a class="btn btn-default" href="#" role="button">Plan tours &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
       </div><!-- /.row -->
 
@@ -55,10 +54,10 @@ Carousel
 
         <div class="col-md-7">
           <h2 class="featurette-heading">"The best and easiest way to get to know Bangkok.  Ryan helped me to focus my time on what was important.  Our family is extremely grateful for this service!"<span class="text-muted"><br> - Jennfier, UK</span></h2>
-          <p class="lead">Jennifer traveled with her family of four and was toured by Ryan Torres.  We've piloted dozens of tours.  Our first customers have had nothing short of an amazing time.</p>
+          <p class="lead">Jennifer traveled with her family of four and was toured by Ryan Torres.  She had nothing short of an amazing time.</p> <p><a class="btn btn-default" href="#" role="button">Read more &raquo;</a></p>
         </div>
         <div class="col-md-5">
-          <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+           <%= image_tag("singapore_skyline.jpg",class:"img-circle img-feature" ) %>
         </div>
       </div>
 
@@ -66,11 +65,11 @@ Carousel
 
       <div class="row featurette">
         <div class="col-md-5">
-          <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+         <%= image_tag("singapore_skyline.jpg",class:"img-circle img-feature" ) %>
         </div>
         <div class="col-md-7">
           <h2 class="featurette-heading">Launching first in South-East Asia. <span class="text-muted">Traveling there won't be the same again.</span></h2>
-          <p class="lead">Manila, Phonmh Penh, Bangkok, Cebu City, Jakarta, and Kuala Lumpur.</p>
+          <p><a class="btn btn-default" href="#" role="button">Learn more &raquo;</a></p>
         </div>     
       </div>
 
@@ -81,98 +80,6 @@ Carousel
      
 
     </div><!-- /.container -->
-
-
-<!-- /.carousel
-<!
-<div class="container marketing">
-  <div id="posts" class="row">
-    <div class="col-lg-3 col-user post">
-      <h3>Jonathan Lau</h3>
-      <h4>Passionate about environmental justice <em>and 12 other causes</em></h4>
-      <p>$42K raised, $5k donated, 10 ppl helped, 4 ideas</p>
-      <p><a class="btn btn-default" href="#" role="button">View profile &raquo;</a></p>
-    </div>
-    <div class="col-lg-3 col-user post">
-      <h3>Red Cross</h3>
-      <div class="image"><img src='http://placekitten.com/100/100'></div>
-      <p>$42K raised, $5k donated, 10 ppl helped, 4 ideas</p>
-      <p><a class="btn btn-default" href="#" role="button">View profile &raquo;</a></p>
-    </div>
-    <div class="col-lg-3 col-user post">
-      <h3>Jennfier Huang</h3>
-      <p>Help wanted: Looking for bio-lab assistant doing genetics mutation study</p>
-      <p><a class="btn btn-default" href="#" role="button">Details &raquo;</a></p>
-    </div>
-    <div class="col-lg-3 col-user post">
-      <h3>Fundraiser Video</h3>
-      <p>by James Liu</p>
-      <iframe title="YouTube video player" class="youtube-player" type="text/html" 
-width="200" height="200" src="http://www.youtube.com/embed/W-Q7RMpINVo"
-frameborder="0" allowFullScreen></iframe>
-    </div>
-    <div class="col-lg-3 col-user post">
-      <h3>Jennifer Ho</h3>
-      <h4>Passionate about k-12 education system <em>and 4 other causes</em></h4>
-      <p>$300 raised, $50 donated, 2 ppl helped, 1 idea</p>
-      <p><a class="btn btn-default" href="#" role="button">View profile &raquo;</a></p>
-    </div>
-    <div class="col-lg-3 col-user post">
-      <div class='post-wrapper'>
-        <h3>WHO</h3>
-        <img src='http://placekitten.com/100/100'>
-        <p>$40mil raised, 50k followers</p>
-        <p><a class="btn btn-default" href="#" role="button">Learn More &raquo;</a></p>
-      </div>
-    </div>
-    <div class="col-lg-3 col-user post">
-      <h3>New Donation</h3>
-      <h4>$75 to WHO</h4>
-      <p><em>Thank you Sam Huberman!</em></p>
-    </div>
-    <div class="col-lg-3 col-user post">
-      <h3>Anonymous</h3>
-      <p>Breast Cancer Survivor: Looking for post-op support group</p>
-      <p><a class="btn btn-default" href="#" role="button">Help &raquo;</a></p>
-    </div>
-      <div class="col-lg-3 col-user post">
-      <h3>Fundraiser Video</h3>
-      <p>by James Liu</p>
-      <iframe title="YouTube video player" class="youtube-player" type="text/html" 
-width="200" height="200" src="http://www.youtube.com/embed/W-Q7RMpINVo"
-frameborder="0" allowFullScreen></iframe>
-    </div>
-    <div class="col-lg-3 col-user post">
-      <h3>Jennifer Ho</h3>
-      <h4>Passionate about k-12 education system <em>and 4 other causes</em></h4>
-      <p>$300 raised, $50 donated, 2 ppl helped, 1 idea</p>
-      <p><a class="btn btn-default" href="#" role="button">View profile &raquo;</a></p>
-    </div>
-    <div class="col-lg-3 col-user post">
-      <div class='post-wrapper'>
-        <h3>WHO</h3>
-        <img src='http://placekitten.com/100/100'>
-        <p>$40mil raised, 50k followers</p>
-        <p><a class="btn btn-default" href="#" role="button">Learn More &raquo;</a></p>
-      </div>
-    </div>
-    <div class="col-lg-3 col-user post">
-      <h3>New Donation</h3>
-      <h4>$75 to WHO</h4>
-      <p><em>Thank you Sam Huberman!</em></p>
-    </div>
-    <div class="col-lg-3 col-user post">
-      <h3>Anonymous</h3>
-      <p>Breast Cancer Survivor: Looking for post-op support group</p>
-      <p><a class="btn btn-default" href="#" role="button">Help &raquo;</a></p>
-    </div>
-  </div>
 </div>
 
-<script>
-  $(document).ready(function() {
-    $('#posts').isotope({
-      itemSelector : '.post'
-    });
-  });
- </script>
+

@@ -6,14 +6,81 @@ body {
   padding-top: 50px;
   padding-bottom: 20px;
 }
-/*
 .landing-image {
-  margin-left: -70px;
   display: block;
   height: auto;
   max-width: 120%;
 }
-*/
+
+/* footer fix */
+html,
+body {
+  height: 100% !important;
+  /* The html and body elements cannot have any padding or margin. */
+}
+/* Wrapper for page content to push down footer */
+div#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  /* Negative indent footer by it's height */
+  margin: 0 auto -100px;
+  padding-bottom: 60px !important;
+}
+
+/* Set the fixed height of the footer here */
+#push {
+  height: 60px;
+  display: block;
+  width: 100%;
+}
+#footer {
+  height: 60px;
+}
+#footer {
+  background-color: white !important;
+  li {
+      display: inline-block;
+  }
+}
+
+/* Lastly, apply responsive CSS fixes as necessary */
+@media (max-width: 767px) {
+#footer {
+  margin-left: -20px;
+  margin-right: -20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+}
+
+/* CUSTOMIZE THE IMAGES */
+
+div.marketing img.img-landing {
+  width: 350px;
+  height: auto;
+}
+
+/* CUSTOMIZE FOOTER */
+.body-div {
+  position: relative;
+  min-height: 100%;
+  margin-left: 0px;
+  body {
+    position:relative; 
+    z-index:1; 
+    height:100%; 
+    font-family:"Source Sans Pro",Sans-Serif,Helvetica,Arial;
+    color:black;
+  }
+  .footer-fix {
+    padding-bottom: 60px;
+    padding-top: 60px
+  }
+}
+
+
+
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
 

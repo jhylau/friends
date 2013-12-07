@@ -27,8 +27,11 @@
         <a class="navbar-brand" href="/">EvolveTravel</a>
       </div>
       <div class="navbar-collapse collapse">
-        <a class="navbar-brand" href="/">How it works</a>
-        <a class="navbar-brand" href="/">Become a tour guide</a>
+        <ul class="nav navbar-nav">
+          <li><%= link_to "Find a guide", guides_path %></a></li>
+          <li><a href="#">Become a tour guide</a></li>
+          <li><a href="#">How it works</a></li>
+        </ul>
         <ul class="nav navbar-nav pull-right">
         <% if user_signed_in? %>
               <li><%= link_to current_user.email, edit_user_registration_path %></li>
@@ -42,8 +45,10 @@
       </div><!--/.navbar-collapse -->
     </div>
   </div>  
-  <%= yield %> 
-       
+  <div id="wrap"> 
+    <%= yield %> 
+  </div>
+  <div id="push">fuck</div>
 	<div class="container">
         <div class="row">
         <div class="col-lg-12">
@@ -57,16 +62,16 @@
         <% end %>
         </div>
     </div>
+	</div>
 
-	 </div>
-
-  <div class="container">
-    <div class="row">
-    <footer>
-      <p class="pull-right"><a href="#">Back to top</a></p>
-      <p>&copy; 2013 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+  <div class="navbar-fixed-bottom navbar footer" id="footer">
+    <footer class="container">
+      <ul class ="footer-ul nav span12">
+      <li>&copy; 2013 Company, Inc. &middot;</li>
+      <li><a href="#">Privacy &middot;</a></li>
+      <li><a href="#">Terms</a></li>
+      </ul>
     </footer>
-  </div>
   </div>
 </body>
 </html>
