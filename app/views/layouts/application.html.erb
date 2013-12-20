@@ -11,7 +11,7 @@
     <meta name="author"           content="Jonathan Lau"/>
     <meta name="designer"         content="Jonathan Lau"/>
     <meta name="copyright"          content="Copyright Evolve &copy;2013"/>
-    <%#= favicon_link_tag 'favicon.ico' %>
+    <%= favicon_link_tag 'favicon.png' %>
     <%#= display_meta_tags :site => 'Code' %>
 </head>
 <body>
@@ -24,13 +24,14 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="/">EvolveTravel</a>
+        <%= link_to(image_tag("logo_navbar.png", :alt => "Evolve Travel", :title => "Evolve Travel"), "/")%>
       </div>
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
-          <li><%= link_to "Find a guide", guides_path %></a></li>
-          <li><a href="#">Become a tour guide</a></li>
+          <li><%= link_to "Flights", guides_path %></a></li>
+          <li><a href="#">Hotels</a></li>
           <li><a href="#">How it works</a></li>
+          <li><a href="#">FAQ</a></li>
         </ul>
         <ul class="nav navbar-nav pull-right">
         <% if user_signed_in? %>
@@ -48,7 +49,7 @@
   <div id="wrap"> 
     <%= yield %> 
   </div>
-  <div id="push">fuck</div>
+  <div id="push"></div>
 	<div class="container">
         <div class="row">
         <div class="col-lg-12">
@@ -67,8 +68,8 @@
   <div class="navbar-fixed-bottom navbar footer" id="footer">
     <footer class="container">
       <ul class ="footer-ul nav span12">
-      <li>&copy; 2013 Company, Inc. &middot;</li>
-      <li><a href="#">Privacy &middot;</a></li>
+      <li>&copy; 2013 Company, Inc.</li>
+      <li><a href="#">Privacy</a></li>
       <li><a href="#">Terms</a></li>
       </ul>
     </footer>

@@ -6,18 +6,32 @@ body {
   padding-top: 50px;
   padding-bottom: 20px;
 }
+
+/* landing images */
 .landing-image {
   display: block;
   height: auto;
   max-width: 120%;
 }
 
+.logo-home {
+  margin: 0 auto;
+}
+
+.container-navbar-fix {
+  margin-top: 50px;
+}
+
+.hr-style {
+  
+}
 /* footer fix */
 html,
 body {
   height: 100% !important;
   /* The html and body elements cannot have any padding or margin. */
 }
+
 /* Wrapper for page content to push down footer */
 div#wrap {
   min-height: 100%;

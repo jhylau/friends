@@ -4,15 +4,52 @@
         <div class="item active">
           <%= image_tag("landing_image.jpg", :class => "landing-image img-responsive") %>
           <div class="container">
-            <div class="carousel-caption">
-              <h1>Evolve Travel</h1>
-              <p>The authentic local experience</p>
-              <p>Sign up now to get your first tour for free.</p>
-              <div class="input-group col-lg-4 col-lg-offset-4">
-                <input type="text" class="form-control">
-                <span class="input-group-addon signup-addon">GO</span>
+            <%= form_for @flight_search do |f| %>
+            <div class="row">
+              <div class="col-sm-6 col-md-4">
+                <div class="thumbnail flight-search-thumbnail">
+                  <div class="caption">
+                    <h3>Flight Destinations</h3>
+                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                  </div>
+                </div>
               </div>
-            </div>
+              <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                  <div class="caption">
+                    <h3>Flight Dates</h3>
+                    <div class="control-group flight-dates">
+                      <%= f.label :flight_start, "Date of Departure", :class=>"control-label" %>
+                      <% fmt = "%m/%d/%Y" %>
+                      <div class="controls">
+                      <% today = Date.today %>
+                        <div class="input-group">
+                          <span class="glyphicon glyphicon-calendar"></span>
+                          <%= f.text_field :flight_start, :value => nil, :class => "input-small flight-date" %>
+                        </div>
+                      </div> 
+
+                      <div class="control-group">
+                        <%= f.label :flight_end, "Date of Arrival", :class=>"control-label" %>
+                        <div class="controls">
+                          <%= f.text_field :flight_end, :value => nil, :class => "input-small flight-date" %>
+                        </div> 
+                      </div>  
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                  <div class="caption">
+                    <h3>Passengers</h3>
+                    <p>...</p>
+                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                  </div>
+                </div>
+              </div>
+            </div><!-- end row-->
+            <% end %>
           </div>
         </div>
     </div>
@@ -53,8 +90,8 @@
       <div class="row featurette">
 
         <div class="col-md-7">
-          <h2 class="featurette-heading">"The best and easiest way to get to know Bangkok.  Ryan helped me to focus my time on what was important.  Our family is extremely grateful for this service!"<span class="text-muted"><br> - Jennfier, UK</span></h2>
-          <p class="lead">Jennifer traveled with her family of four and was toured by Ryan Torres.  She had nothing short of an amazing time.</p> <p><a class="btn btn-default" href="#" role="button">Read more &raquo;</a></p>
+          <h2 class="featurette-heading">"The best and easiest way to get to know Hong Kong.  Tim elped me to focus my time on what was important.  Our family is extremely grateful for this service!"<span class="text-muted"><br> - Jennfier, UK</span></h2>
+          <p class="lead">Jennifer traveled with her family of four and was toured by Tim Lau.  She had nothing short of an amazing time.</p> <p><a class="btn btn-default" href="#" role="button">Read more &raquo;</a></p>
         </div>
         <div class="col-md-5">
            <%= image_tag("singapore_skyline.jpg",class:"img-circle img-feature" ) %>
@@ -68,7 +105,7 @@
          <%= image_tag("singapore_skyline.jpg",class:"img-circle img-feature" ) %>
         </div>
         <div class="col-md-7">
-          <h2 class="featurette-heading">Launching first in South-East Asia. <span class="text-muted">Traveling there won't be the same again.</span></h2>
+          <h2 class="featurette-heading">Launching first in Hong Kong.<br>12 cities planned for 2014.<br><span class="text-muted">Traveling there won't be the same again.</span></h2>
           <p><a class="btn btn-default" href="#" role="button">Learn more &raquo;</a></p>
         </div>     
       </div>
@@ -81,5 +118,11 @@
 
     </div><!-- /.container -->
 </div>
+
+<script>
+$(document).ready(function() {
+$('.flight-date').datepicker({autoclose: true, format: 'mm/dd/yyyy'});
+});
+</script>
 
 
