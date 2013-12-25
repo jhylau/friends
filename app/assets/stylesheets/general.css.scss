@@ -1,3 +1,5 @@
+/* -------------- GENERAL -----------*/
+
 h1, h2, h3, h4, p {
 	font-family: 'Source Sans Pro',sans-serif;
 }
@@ -7,7 +9,15 @@ body {
   padding-bottom: 20px;
 }
 
-/* landing images */
+.styled-select {
+   width: 40px;
+   height: 20px;
+   border: 1px solid #ccc;
+   margin-top: 5px;
+ }
+
+/* --------------- LANDING PAGE IMAGES ---------------*/
+
 .landing-image {
   display: block;
   height: auto;
@@ -25,7 +35,13 @@ body {
 .hr-style {
   
 }
-/* footer fix */
+
+.landing-signup {
+  color: white;
+}
+
+/* --------------------- FOOTER FIX ---------------- */
+
 html,
 body {
   height: 100% !important;
@@ -71,7 +87,7 @@ div#wrap {
 /* CUSTOMIZE THE IMAGES */
 
 div.marketing img.img-landing {
-  width: 350px;
+  width: 200px;
   height: auto;
 }
 
@@ -215,4 +231,10 @@ div.row div.col-user {
   width: 960px !important;
 }
 
-
+div.passenger-controls {
+  width: 30%;
+  display: inline-block !important;
+  p {
+    margin-bottom: 0px;
+  }
+}
