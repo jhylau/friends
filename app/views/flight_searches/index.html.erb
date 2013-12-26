@@ -1,0 +1,43 @@
+<div class="container container-navbar-fix">
+	<div class="row">
+		<h1 class="text-center">Search Results</h1>
+	</div>
+	<div style="width: 100%; height: 5px; background: #F87431; overflow: hidden;">
+</div>
+
+<table class="table table-striped table-bordered datatable">
+	<thead>
+	  <tr>
+	    <th>Airline</th>
+	    <th>Departure</th>
+	    <th>Arrival</th>
+	    <th>Price ($)</th>
+	    <th>Duration</th>
+	    <th></th>
+	  </tr>
+	</thead>
+	<tbody>
+		<% @flight_searches.each do |f| %>
+		  <tr>
+		    <td><%= f.airline %></td>
+		    <td><%= f.departure_time %></td>
+		    <td><%= f.arrival_time %></td>
+		    <td><%= f.price %></td>
+		    <td><%= f.duration %></td>
+		    <td><button href="/flight_searches" class="btn btn-danger" id="buy" role="button">BUY</button></td>
+		  </tr>
+		<% end %>
+	</tbody>
+</table>
+
+<script>
+    $(document).ready(function() {
+		$('.datatable').dataTable({
+		  "sPaginationType": "bootstrap",
+		  "bFilter": false,
+		  "bInfo": false,
+		  "bLengthChange": false,
+		  "bSortClasses": false 
+		});
+    });
+</script>
