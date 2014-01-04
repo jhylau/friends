@@ -1,4 +1,4 @@
-class FlightSearchesController < ApplicationController
+class FlightsController < ApplicationController
 	def index
 		@flight_searches = []
 		@flight_searches << FlightSearch.new(:departure_time => "2:15pm", :arrival_time => "3:15pm", :price=>"$120", :airline=>"CebuPacificAir", :duration=>"1hr")
@@ -8,6 +8,6 @@ class FlightSearchesController < ApplicationController
 	end
 
 	def create
-		redirect_to flight_searches_path
+		redirect_to flights_path
 	end
 end

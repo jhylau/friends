@@ -5,6 +5,8 @@ Friends::Application.routes.draw do
   root :controller => "home", :action => 'index'
 
   resources :flight_searches
+  resources :flights 
+  resources :hotels
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
