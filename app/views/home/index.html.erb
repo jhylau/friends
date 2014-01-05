@@ -2,9 +2,9 @@
       <!-- Indicators -->
       <div class="carousel-inner">
         <div class="item active">
-          <%= image_tag("landing_image.jpg", class: "landing-image img-responsive") %>
+          <%= image_tag("landing_image.jpg", class: "landing-image") %>
           <div class="container">
-            <%= form_for @flight_search do |f| %>
+            <%= form_for @flight_search, url: flights_path do |f| %>
             <div class="row" id="flight_search">
               <div class="col-xs-4">
                 <div class="thumbnail flight-search-thumbnail">
@@ -16,15 +16,15 @@
                         <div class="input-group">
                           <span class="glyphicon glyphicon glyphicon-transfer input-group-addon"></span>
                           <%= f.text_field :departure, value: nil, class: "form-control" %>
-                          <div class="input-group-btn">
-                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                          <span class="input-group-btn">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">&nbsp;<span class="caret"></span></button>
                             <ul class="dropdown-menu">
                               <li><a class="departure">Manila</a></li>
                               <li><a class="departure">Cebu</a></li>
                               <li class="divider"></li>
                               <li><a class="departure">XYZ</a></li>
                             </ul>
-                          </div>
+                          </span>
                         </div>
                       </div> 
                     </div>
@@ -36,7 +36,7 @@
                           <span class="glyphicon glyphicon glyphicon-transfer input-group-addon"></span>
                           <%= f.text_field :arrival, value: nil, class: "form-control" %>
                           <div class="input-group-btn">
-                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">&nbsp;<span class="caret"></span></button>
                             <ul class="dropdown-menu">
                               <li><a class="arrival">Manila</a></li>
                               <li><a class="arrival">Cebu</a></li>
@@ -124,7 +124,7 @@
                 <div class="text-center landing-signup">
                   <h1>Evolve Travel</h1>
                   <h2>Sign up now for cheap airfares and hotel deals.</h2>
-                  <div class="input-group col-lg-4 col-lg-offset-4">
+                  <div class="input-group col-xs-4 col-xs-offset-4">
                     <input type="text" class="form-control" placeholder="john@example.com">
                     <span class="input-group-addon signup-addon">GO</span>
                 </div>
@@ -142,19 +142,19 @@
 
       <!-- Three columns of text below the carousel -->
       <div class="row">
-        <div class="col-lg-4">
+        <div class="col-xs-4">
          <%= image_tag("bangkok_elephant.jpg",class:"img-circle img-landing" ) %>
           <h2>Easy Comparisons</h2>
           <p>See prices and schedules side by side.<br>All domestic filipino flights are listed along with thousands of local hotels</p>
           <p><a class="btn btn-default" href="#" role="button">Learn more &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
+        <div class="col-xs-4">
           <%= image_tag("family_backpack.jpg",class:"img-circle img-landing" ) %>
           <h2>Best Deals</h2>
           <p>Find the best deals and promotions on here so you can save for other things!</p>
           <p><a class="btn btn-default" href="#" role="button">Learn more &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
+        <div class="col-xs-4">
           <%= image_tag("singapore_skyline.jpg",class:"img-circle img-landing" ) %>
           <h2>Domestic-International</h2>
           <p>We cover both domestic Philippines and international flights and hotels<br></p>
@@ -169,11 +169,11 @@
 
       <div class="row featurette">
 
-        <div class="col-md-7">
-          <h2 class="featurette-heading">"The best and easiest way to find flights and hotels in the Philippines.  Evolve Travel helped focus my time on what was important - enjoying our holiday!"<span class="text-muted"><br> - Jennfier, UK</span></h2>
+        <div class="col-xs-7">
+          <h3 class="featurette-heading">"The best and easiest way to find flights and hotels in the Philippines.  Evolve Travel helped focus my time on what was important - enjoying our holiday!"<span class="text-muted"><br> - Jennfier, UK</span></h3>
           <p class="lead">Jennifer Torres</p> <p><a class="btn btn-default" href="#" role="button">Read more &raquo;</a></p>
         </div>
-        <div class="col-md-5">
+        <div class="col-xs-5">
            <%= image_tag("singapore_skyline.jpg",class:"img-circle img-feature" ) %>
         </div>
       </div>

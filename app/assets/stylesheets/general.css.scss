@@ -16,6 +16,23 @@ body {
    margin-top: 5px;
  }
 
+@media (min-width: 1px) {
+  .navbar-nav {
+    float: left;
+    margin: 0;
+  }
+  .navbar-nav > li {
+    float: left;
+  }
+  .navbar-nav > li > a {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .navbar-nav.navbar-right:last-child {
+    margin-right: -15px;
+  }
+}
+
 /* --------------- LANDING PAGE IMAGES ---------------*/
 
 .landing-image {
@@ -196,7 +213,7 @@ div.marketing img.img-landing {
   }
 
   .featurette-heading {
-    font-size: 50px;
+    font-size: 30px;
   }
 
 }
