@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby "2.0.0"
+ruby "1.9.3"
 
 gem 'rails', '3.2.13'
 
@@ -27,6 +27,7 @@ gem 'less-rails'
 gem 'therubyracer'
 gem 'fb_graph'
 gem 'jquery-datatables-rails', git: 'git://github.com/rweng/jquery-datatables-rails.git'
+gem 'twitter'
 
 # Gems used only for assets and not required
 # in production environments by default.
