@@ -7,6 +7,7 @@ Friends::Application.routes.draw do
   resources :flight_searches
   resources :flights 
   resources :hotels
+  resources :deals
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

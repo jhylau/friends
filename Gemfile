@@ -27,7 +27,8 @@ gem 'less-rails'
 gem 'therubyracer'
 gem 'fb_graph'
 gem 'jquery-datatables-rails', git: 'git://github.com/rweng/jquery-datatables-rails.git'
-gem 'twitter'
+gem 'twitter', '4.8'
+gem 'tweetstream', '2.6.0'
 
 # Gems used only for assets and not required
 # in production environments by default.
