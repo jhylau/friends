@@ -77,7 +77,7 @@ GEM
     execjs (2.0.2)
     fancybox-rails (0.2.1)
       railties (>= 3.1.0)
-    faraday (0.8.8)
+    faraday (0.8.9)
       multipart-post (~> 1.2.0)
     fb_graph (2.7.8)
       httpclient (>= 2.2.0.2)

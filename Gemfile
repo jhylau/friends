@@ -29,6 +29,9 @@ gem 'fb_graph'
 gem 'jquery-datatables-rails', git: 'git://github.com/rweng/jquery-datatables-rails.git'
 gem 'twitter', '4.8'
 gem 'tweetstream', '2.6.0'
+gem "sitemap_generator"
+gem 'newrelic_rpm'
+gem 'meta-tags', :require => 'meta_tags'
 
 # Gems used only for assets and not required
 # in production environments by default.
