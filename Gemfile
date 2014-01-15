@@ -32,6 +32,9 @@ gem 'tweetstream', '2.6.0'
 gem "sitemap_generator"
 gem 'newrelic_rpm'
 gem 'meta-tags', :require => 'meta_tags'
+gem 'hpricot'
+gem 'roadie'
+
 
 # Gems used only for assets and not required
 # in production environments by default.
