@@ -42,6 +42,7 @@ GEM
     bcrypt-ruby (3.1.2)
     bootstrap-sass (2.3.1.3)
       sass (~> 3.2)
+    buftok (0.2.0)
     builder (3.0.4)
     capistrano (3.1.0)
       i18n
@@ -49,7 +50,7 @@ GEM
       sshkit (~> 1.3)
     capistrano-ext (1.2.1)
       capistrano (>= 1.0.0)
-    coderay (1.0.9)
+    coderay (1.1.0)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)
@@ -58,35 +59,28 @@ GEM
       execjs
     coffee-script-source (1.6.3)
     commonjs (0.2.6)
-    cookiejar (0.3.0)
     css_parser (1.3.5)
       addressable
-    daemons (1.1.9)
+    descendants_tracker (0.0.3)
     devise (3.1.1)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.1)
       railties (>= 3.2.6, < 5)
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
-    em-http-request (1.1.2)
-      addressable (>= 2.3.4)
-      cookiejar
-      em-socksify (>= 0.3)
-      eventmachine (>= 1.0.3)
-      http_parser.rb (>= 0.6.0)
-    em-socksify (0.3.0)
-      eventmachine (>= 1.0.0.beta.4)
-    em-twitter (0.3.2)
-      eventmachine (~> 1.0)
-      http_parser.rb (~> 0.6)
-      simple_oauth (~> 0.2)
+    equalizer (0.0.9)
     erubis (2.7.0)
-    eventmachine (1.0.3)
     execjs (2.0.2)
+    factory_girl (4.3.0)
+      activesupport (>= 3.0.0)
+    factory_girl_rails (4.3.0)
+      factory_girl (~> 4.3.0)
+      railties (>= 3.0.0)
     fancybox-rails (0.2.1)
       railties (>= 3.1.0)
-    faraday (0.8.8)
+    faraday (0.8.9)
       multipart-post (~> 1.2.0)
+    fastercsv (1.5.5)
     fb_graph (2.7.8)
       httpclient (>= 2.2.0.2)
       multi_json (>= 1.3)
@@ -101,7 +95,9 @@ GEM
     hashie (2.0.5)
     hike (1.2.3)
     hpricot (0.8.6)
-    http_parser.rb (0.6.0)
+    http (0.5.0)
+      http_parser.rb
+    http_parser.rb (0.5.3)
     httpclient (2.3.4.1)
     i18n (0.6.1)
     journey (1.0.4)
@@ -125,11 +121,17 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    memoizable (0.2.0)
+      thread_safe (~> 0.1.3)
     meta-tags (1.5.0)
       actionpack
-    method_source (0.8.1)
+    metaclass (0.0.2)
+    method_source (0.8.2)
     mime-types (1.25)
     mini_portile (0.5.2)
+    minitest (5.2.1)
+    mocha (1.0.0)
+      metaclass (~> 0.0.1)
     multi_json (1.8.2)
     multipart-post (1.2.0)
     mysql2 (0.3.14)
@@ -152,10 +154,15 @@ GEM
       omniauth-oauth (~> 1.0)
     orm_adapter (0.4.0)
     polyglot (0.3.3)
-    pry (0.9.12.2)
-      coderay (~> 1.0.5)
+    pry (0.9.12.4)
+      coderay (~> 1.0)
       method_source (~> 0.8)
       slop (~> 3.4)
+    pry-doc (0.5.1)
+      pry (>= 0.9)
+      yard (>= 0.8)
+    pry-rails (0.3.2)
+      pry (>= 0.9.10)
     rack (1.4.5)
     rack-cache (1.2)
       rack (>= 0.4)
@@ -219,10 +226,16 @@ GEM
       railties (~> 3.2.0)
       sass (>= 3.1.10)
       tilt (~> 1.3)
+    shoulda (3.5.0)
+      shoulda-context (~> 1.0, >= 1.0.1)
+      shoulda-matchers (>= 1.4.1, < 3.0)
+    shoulda-context (1.1.6)
+    shoulda-matchers (2.5.0)
+      activesupport (>= 3.0.0)
     simple_oauth (0.2.0)
     sitemap_generator (4.2.0)
       builder
-    slop (3.4.5)
+    slop (3.4.7)
     sprockets (2.2.2)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -234,6 +247,7 @@ GEM
       term-ansicolor
     term-ansicolor (1.2.2)
       tins (~> 0.8)
+    test-unit (2.5.5)
     therubyracer (0.11.4)
       libv8 (~> 3.11.8.12)
       ref
@@ -245,16 +259,17 @@ GEM
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
-    tweetstream (2.6.0)
-      daemons (~> 1.1)
-      em-http-request (>= 1.1.1)
-      em-twitter (~> 0.3)
-      multi_json (~> 1.3)
-      twitter (~> 4.8)
-    twitter (4.8.0)
-      faraday (~> 0.8, < 0.10)
-      multi_json (~> 1.0)
-      simple_oauth (~> 0.2)
+    twitter (5.0.1)
+      addressable (~> 2.3)
+      buftok (~> 0.2.0)
+      descendants_tracker (~> 0.0.1)
+      equalizer (~> 0.0.7)
+      faraday (>= 0.8, < 0.10)
+      http (~> 0.5.0)
+      http_parser.rb (~> 0.5.0)
+      json (~> 1.8)
+      memoizable (~> 0.2.0)
+      simple_oauth (~> 0.2.0)
     tzinfo (0.3.38)
     uglifier (2.3.0)
       execjs (>= 0.3.0)
@@ -268,6 +283,7 @@ GEM
       unicorn
     warden (1.2.3)
       rack (>= 1.0)
+    yard (0.8.7.3)
 
 PLATFORMS
   ruby
@@ -277,7 +293,9 @@ DEPENDENCIES
   capistrano-ext
   coffee-rails (~> 3.2.1)
   devise
+  factory_girl_rails
   fancybox-rails
+  fastercsv
   fb_graph
   friendly_id
   hpricot
@@ -288,18 +306,22 @@ DEPENDENCIES
   less-rails
   mail
   meta-tags
+  minitest
+  mocha
   mysql2
   newrelic_rpm
   omniauth-twitter
-  pry
+  pry-doc
+  pry-rails
   rails (= 3.2.13)
   rails_admin
   roadie
   sass-rails (~> 3.2.3)
+  shoulda
   sitemap_generator
+  test-unit
   therubyracer
-  tweetstream (= 2.6.0)
-  twitter (= 4.8)
+  twitter (~> 5.0.0)
   uglifier (>= 1.0.3)
   unicorn
   unicorn-rails

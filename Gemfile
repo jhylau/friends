@@ -22,18 +22,18 @@ gem 'fancybox-rails'
 gem 'unicorn'
 gem 'unicorn-rails'
 gem 'omniauth-twitter'
-gem 'pry'
 gem 'less-rails'
 gem 'therubyracer'
 gem 'fb_graph'
 gem 'jquery-datatables-rails', git: 'git://github.com/rweng/jquery-datatables-rails.git'
-gem 'twitter', '4.8'
-gem 'tweetstream', '2.6.0'
+gem 'twitter', '~> 5.0.0'
+# gem 'tweetstream' will need to wait for update
 gem "sitemap_generator"
 gem 'newrelic_rpm'
 gem 'meta-tags', :require => 'meta_tags'
 gem 'hpricot'
 gem 'roadie'
+gem 'fastercsv'
 
 
 # Gems used only for assets and not required
@@ -55,6 +55,18 @@ group :development do
   gem 'capistrano-ext', :require => false
 end
 
+group :test do
+  gem 'factory_girl_rails'
+  gem 'shoulda'
+  gem 'minitest'
+  gem 'mocha'
+end
+
+group :development, :test do
+  gem 'test-unit'
+  gem 'pry-rails'
+  gem 'pry-doc'
+end
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

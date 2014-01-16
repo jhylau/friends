@@ -11,4 +11,5 @@ class TwitterIntegration
   def self.streaming_client
   	TweetStream::Client.new
   end
+
 end
