@@ -1,5 +1,7 @@
 class Tweet < ActiveRecord::Base
-  attr_accessible :content, :screen_name, :tweet_id, :twitter_user_id
+  attr_accessible :content, :screen_name, :tweet_id, :twitter_user_id, :airline_id
+
+  belongs_to :airline
 
   PHIL_AIR = 54149214
   TIGER_AIR = 1545718316

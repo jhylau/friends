@@ -11,7 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140111022219) do
+ActiveRecord::Schema.define(:version => 20140116211435) do
+
+  create_table "airlines", :force => true do |t|
+    t.string  "name"
+    t.string  "iata"
+    t.string  "icao"
+    t.string  "call_sign"
+    t.string  "twitter_screen_name"
+    t.integer "twitter_user_id",     :limit => 8
+  end
 
   create_table "flight_searches", :force => true do |t|
     t.string  "departure"
@@ -33,8 +42,8 @@ ActiveRecord::Schema.define(:version => 20140111022219) do
   create_table "tweets", :force => true do |t|
     t.string  "content"
     t.string  "screen_name"
-    t.integer "tweet_id"
-    t.integer "twitter_user_id"
+    t.integer "tweet_id",        :limit => 8
+    t.integer "twitter_user_id", :limit => 8
   end
 
   create_table "users", :force => true do |t|
