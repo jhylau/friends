@@ -8,8 +8,8 @@ class TwitterIntegration
   	end
   end
 
-  def self.streaming_client
-  	TweetStream::Client.new
-  end
+  # def self.streaming_client
+  # 	TweetStream::Client.new
+  # end
 
 end

@@ -16,22 +16,6 @@ body {
    margin-top: 5px;
  }
 
-@media (min-width: 1px) {
-  .navbar-nav {
-    float: left;
-    margin: 0;
-  }
-  .navbar-nav > li {
-    float: left;
-  }
-  .navbar-nav > li > a {
-    padding-top: 15px;
-    padding-bottom: 15px;
-  }
-  .navbar-nav.navbar-right:last-child {
-    margin-right: -15px;
-  }
-}
 
 /* --------------- LANDING PAGE IMAGES ---------------*/
 
@@ -76,6 +60,7 @@ div#wrap {
   height: 100%;
   /* Negative indent footer by it's height */
   margin: 0 auto -100px;
+  margin-bottom: 100px;
   padding-bottom: 60px !important;
 }
 
@@ -86,7 +71,8 @@ div#wrap {
   width: 100%;
 }
 #footer {
-  height: 60px;
+  border-top: 5px #454343 solid;
+  height: 40px;
 }
 #footer {
   background-color: white !important;
@@ -110,6 +96,7 @@ div#wrap {
 div.marketing img.img-landing {
   width: 140px;
   height: auto;
+  margin-top: 0px;
 }
 
 /* CUSTOMIZE FOOTER */

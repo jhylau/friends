@@ -6,12 +6,13 @@ div.row div.col-centered {
 div.navbar-fixed-top.navbar {
 	background-image: none;
 	background-color: white;
-	height: 70px;
+	height: 60px;
 	border-bottom: 10px #454343 solid;
 	a {
 		font-size: 200%;
 		text-shadow: none !important;
 		color: #454343;
+		vertical-align: top;
 		/*margin-top: 5%;*/
 	}
 	ul {
@@ -27,7 +28,7 @@ div.navbar-fixed-top.navbar {
 			
 			color: lightgrey;
 		}
-		}
+	}
 }
 
 div.navbar-header {
