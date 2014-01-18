@@ -7,7 +7,7 @@
 #   Mayor.create(:name => 'Emanuel', :city => cities.first)
 
 require Rails.root.join('app/helpers','twitter_helper.rb')
-
+include TwitterHelper
 users = ['flypal', 'cebupacificair', 'tigerair', 'airasiaph']
 
 Airline.create!(:name => "Cebu Pacific Air", :icao => "CEB", :iata => "5J", :twitter_user_id => 62452990, :twitter_screen_name => "cebupacificair", :call_sign => "CEBU" )
@@ -24,5 +24,5 @@ tigerair = rate_limit_timeline(client,"tigerair").first
 airasiaph = rate_limit_timeline(client,"airasiaph").first
 
 users.each do |u|
-	Tweet.create!(:content => eval(u).text, :tweet_id => eval(u).id, :airline_id => Airline.where(:twitter_user_id => eval(u).user.id).id
+	Tweet.create!(:content => eval(u).text, :tweet_id => eval(u).id, :airline_id => Airline.where(:twitter_user_id => eval(u).user.id))
 end

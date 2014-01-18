@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140116211435) do
+ActiveRecord::Schema.define(:version => 20140118040204) do
 
   create_table "airlines", :force => true do |t|
     t.string  "name"
@@ -23,13 +23,20 @@ ActiveRecord::Schema.define(:version => 20140116211435) do
   end
 
   create_table "flight_searches", :force => true do |t|
-    t.string  "departure"
-    t.string  "arrival"
     t.date    "flight_start"
     t.date    "flight_end"
+    t.integer "duration"
     t.integer "adults"
     t.integer "children"
     t.integer "infants"
+  end
+
+  create_table "flights", :force => true do |t|
+    t.date    "departure"
+    t.date    "arrival"
+    t.integer "price"
+    t.integer "duration"
+    t.string  "airline_id"
   end
 
   create_table "hotel_searches", :force => true do |t|
@@ -41,9 +48,8 @@ ActiveRecord::Schema.define(:version => 20140116211435) do
 
   create_table "tweets", :force => true do |t|
     t.string  "content"
-    t.string  "screen_name"
-    t.integer "tweet_id",        :limit => 8
-    t.integer "twitter_user_id", :limit => 8
+    t.integer "tweet_id",   :limit => 8
+    t.integer "airline_id"
   end
 
   create_table "users", :force => true do |t|
