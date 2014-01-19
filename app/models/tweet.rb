@@ -3,10 +3,10 @@ class Tweet < ActiveRecord::Base
 
   belongs_to :airline
 
-  PHIL_AIR = 54149214
-  TIGER_AIR = 1545718316
-  CEBU_PAC = 62452990
-  AIR_ASIA = 1361577234
+  FLYPAL = 54149214
+  TIGERAIR = 1545718316
+  CEBUPACIFICAIR = 62452990
+  AIRASIAPH = 1361577234
 
   def self.pull_tweets
   	# daemon = TweetStream::Daemon.new('tracker', :log_output => true)
@@ -33,11 +33,11 @@ class Tweet < ActiveRecord::Base
     # end
   end
 
-  def airline_latest_results(airline)
+  def latest_results(airline)
     self.where(:twitter_user_id => airline).last
   end
 
-  def airline_all_results(airline)
+  def all_results(airline)
     self.where(:twitter_user_id => airline)
   end
 end

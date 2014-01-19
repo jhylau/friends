@@ -24,5 +24,5 @@ tigerair = rate_limit_timeline(client,"tigerair").first
 airasiaph = rate_limit_timeline(client,"airasiaph").first
 
 users.each do |u|
-	Tweet.create!(:content => eval(u).text, :tweet_id => eval(u).id, :airline_id => Airline.where(:twitter_user_id => eval(u).user.id))
+	Tweet.create!(:content => eval(u).text, :tweet_id => eval(u).id, :airline_id => eval(u).user.id)
 end

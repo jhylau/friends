@@ -3,7 +3,7 @@ class CreateTweetsTable < ActiveRecord::Migration
   	create_table :tweets do |t|
   		t.string :content
   		t.integer :tweet_id, :limit => 8
-  		t.integer :airline_id
+  		t.integer :twitter_user_id
   	end
   end
 end
