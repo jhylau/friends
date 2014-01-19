@@ -47,9 +47,9 @@ ActiveRecord::Schema.define(:version => 20140118040204) do
   end
 
   create_table "tweets", :force => true do |t|
-    t.string  "content"
-    t.integer "tweet_id",   :limit => 8
-    t.integer "airline_id"
+    t.string  "text"
+    t.integer "tweet_id",        :limit => 8
+    t.integer "twitter_user_id"
   end
 
   create_table "users", :force => true do |t|

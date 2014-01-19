@@ -145,22 +145,22 @@
           <div class="col-xs-3">
            <%= image_tag("flypal.jpeg",class:"img-circle img-landing" ) %>
             <h2>FlyPAL</h2>
-            <p><%= @latest_tweets.flypal %></p>
+            <p><%= Tweet.latest_results(Tweet::FLYPAL).text %></p>
           </div><!-- /.col-lg-4 -->
           <div class="col-xs-3">
             <%= image_tag("cebu_pac.jpg",class:"img-circle img-landing" ) %>
             <h2>Cebu Pacific</h2>
-            <p><%= @latest_tweets.cebupacificair %></a></p>
+            <p><%= Tweet.latest_results(Tweet::CEBUPACIFICAIR).text %></a></p>
           </div><!-- /.col-lg-4 -->
           <div class="col-xs-3">
             <%= image_tag("air_asia.jpg",class:"img-circle img-landing" ) %>
             <h2>Air Asia</h2>
-            <p><%= @latest_tweets.airasiaph %></a></p>
+            <p><%= Tweet.latest_results(Tweet::AIRASIAPH).text %></a></p>
           </div><!-- /.col-lg-4 -->
           <div class="col-xs-3">
             <%= image_tag("tiger_air.jpeg",class:"img-circle img-landing" ) %>
             <h2>Tiger Air</h2>
-            <p><%= @latest_tweets.tigerair %></a></p>
+            <p><%= Tweet.latest_results(Tweet::TIGERAIRPH).text %></a></p>
           </div><!-- /.col-lg-4 -->
           <div class="col-xs-12">
             <a class="btn btn-md btn-danger" href="/flight-deals">More Flight Deals</a>
@@ -196,8 +196,8 @@
       <div class="row featurette">
 
         <div class="col-xs-7">
-          <h3 class="featurette-heading">"The best and easiest way to find flights and hotels in the Philippines.  Evolve Travel helped focus my time on what was important - enjoying our holiday!"<span class="text-muted"><br> - Jennfier, UK</span></h3>
-          <p class="lead">Jennifer Torres</p> <p><a class="btn btn-default" href="#" role="button">Read more &raquo;</a></p>
+          <h4 class="featurette-heading">"The best and easiest way to find flights and hotels in the Philippines.  Evolve Travel helped focus my time on what was important - enjoying our holiday!"<span class="text-muted"><br> - Jennfier Torres, UK</span></h4>
+          <p><a class="btn btn-default" href="#" role="button">Read more &raquo;</a></p>
         </div>
         <div class="col-xs-5">
            <%= image_tag("singapore_skyline.jpg",class:"img-circle img-feature" ) %>
@@ -222,8 +222,8 @@
       <!-- FOOTER -->
      
 
-    </div><!-- /.container -->
-</div>
+    <!-- </div>/.container
+</div> -->
 
 <script>
 $(document).ready(function() {
