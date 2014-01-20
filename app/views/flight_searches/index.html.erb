@@ -139,7 +139,8 @@
     <!-- Wrap the rest of the page in another container to center all the content. -->
     <div class="container marketing">
       <!-- Three columns of text below the carousel -->
-
+       <% if 0 %> <!-- Tweet latest_results does not return anything at this time -->
+       <% else %>
         <div class="row">
           <h1>Latest Deals</h1>
           <div class="col-xs-3">
@@ -166,6 +167,7 @@
             <a class="btn btn-md btn-danger" href="/flight-deals">More Flight Deals</a>
           </div>
         </div><!-- /.row -->
+       <% end %>
       <div class="row">
         <h1>#1 Filipino Travel Website</h1>
         <div class="col-xs-4">
