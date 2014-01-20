@@ -22,23 +22,14 @@ class Tweet < ActiveRecord::Base
    #        :twitter_user_id: tweet.user.id
   	#   	)
   	# end
-    # TWITTER_REST_CLIENT.favorites("railscasts").each do |tweet|
-    #   unless exists?(tweet_id: tweet.id)
-    #     create!(
-    #       tweet_id: tweet.id,
-    #       content: tweet.text,
-    #       screen_name: tweet.user.screen_name,
-    #     )
-    #   end
-    # end
   end
 
   def self.latest_results(twitter_user_id)
     self.where(:twitter_user_id => twitter_user_id).last
   end
 
-  def self.all_results(airline)
-    self.where(:twitter_user_id => twitter_user_id).last
+  def self.all_results(twitter_user_id)
+    self.where(:twitter_user_id => twitter_user_id)
   end
 end
 

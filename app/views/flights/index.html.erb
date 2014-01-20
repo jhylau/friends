@@ -12,25 +12,55 @@
 
 	<div class="row">
 		<div class="btn-group col-xs-12">
-		  <button type="button" class="btn btn-default col-xs-3" id="temp1">Direct/Transfer</button>
+		  <button type="button" class="btn btn-default col-xs-3" id="direct-transfer">Direct/Transfer</button>
 		  <button type="button" class="btn btn-default col-xs-3" id="airlines">Select Airline</button>
-		  <button type="button" class="btn btn-default col-xs-3" id="temp1">Select Time</button>
-		  <button type="button" class="btn btn-default col-xs-3" id="temp1">Change Date</button>
+		  <button type="button" class="btn btn-default col-xs-3" id="time">Select Time</button>
+		  <button type="button" class="btn btn-default col-xs-3" id="date">Change Date</button>
+		</div>
+	</div>
+	<div class="row">
+		<div class="hidden" id="direct-transfer-panel">
+		  <span class="col-xs-3" id="direct">
+			<input type="checkbox"> Direct</input>
+		  </span>
+		  <span class="col-xs-3" id="transfer">
+			<input type="checkbox"> Transfer</input>
+		  </span>
+		</div>
+	</div>
+	<div class="row">
+		<div class="hidden" id="time-panel">
+		  <span class="col-xs-3" id="direct">
+			<input type="checkbox"> Direct</input>
+		  </span>
+		  <span class="col-xs-3" id="transfer">
+			<input type="checkbox"> Transfer</input>
+		  </span>
+		</div>
+	</div>
+	<div class="row">
+		<div class="hidden" id="date-panel">
+		  <span class="col-xs-3" id="direct">
+			<input type="checkbox"> Direct</input>
+		  </span>
+		  <span class="col-xs-3" id="transfer">
+			<input type="checkbox"> Transfer</input>
+		  </span>
 		</div>
 	</div>
 	<div class="row">
 		<div class="hidden" id="airline-panel">
-		  <span class="col-xs-3">
+		  <span class="col-xs-3" id="flypal">
 			<input type="checkbox"> Philippine Airlines</input>
 		  </span>
-		  <span class="col-xs-3">
+		  <span class="col-xs-3" id="airasiaph">
 			<input type="checkbox"> Air Asia</input>
 		  </span>
-  		  <span class="col-xs-3">
+  		  <span class="col-xs-3" id="cebupacificair">
 			<input type="checkbox"> Cebu Pacific Air</input>
 		  </span>
-  		  <span class="col-xs-3">
-			<input type="checkbox"> AirPhil</input>
+  		  <span class="col-xs-3" id="tigerair">
+			<input type="checkbox"> Tiger Air</input>
 		  </span>
 		</div>
 	</div>
@@ -70,7 +100,40 @@
 		  "bSortClasses": false 
 		});
 		$('#airlines').on('click', function() {
-			$('#airline-panel').toggleClass('hidden')
+			var panels = ['time-panel','direct-transfer-panel','date-panel'];
+			for (p in panels) {
+				if(!$('#' + panels[p]).hasClass('hidden')) {
+					$('#'+ panels[p]).toggleClass('hidden');
+				};
+			};
+			$('#airline-panel').toggleClass('hidden');
+		});	
+		$('#direct-transfer').on('click', function() {
+			var panels = ['time-panel','airline-panel','date-panel'];
+			for (p in panels) {
+				if(!$('#' + panels[p]).hasClass('hidden')) {
+					$('#'+ panels[p]).toggleClass('hidden');
+				};
+			};
+			$('#direct-transfer-panel').toggleClass('hidden')
+		});	
+		$('#time').on('click', function() {
+			var panels = ['airline-panel','direct-transfer-panel','date-panel'];
+			for (p in panels) {
+				if(!$('#' + panels[p]).hasClass('hidden')) {
+					$('#'+ panels[p]).toggleClass('hidden');
+				};
+			};
+			$('#time-panel').toggleClass('hidden')
+		});	
+		$('#date').on('click', function() {
+			var panels = ['time-panel','direct-transfer-panel','airline-panel'];
+			for (p in panels) {
+				if(!$('#' + panels[p]).hasClass('hidden')) {
+					$('#'+ panels[p]).toggleClass('hidden');
+				};
+			};
+			$('#date-panel').toggleClass('hidden')
 		});	
     });
 </script>
