@@ -1,3 +1,5 @@
+/* -------------- GENERAL -----------*/
+
 h1, h2, h3, h4, p {
 	font-family: 'Source Sans Pro',sans-serif;
 }
@@ -7,7 +9,16 @@ body {
   padding-bottom: 20px;
 }
 
-/* landing images */
+.styled-select {
+   width: 40px;
+   height: 20px;
+   border: 1px solid #ccc;
+   margin-top: 5px;
+ }
+
+
+/* --------------- LANDING PAGE IMAGES ---------------*/
+
 .landing-image {
   display: block;
   height: auto;
@@ -25,7 +36,17 @@ body {
 .hr-style {
   
 }
-/* footer fix */
+
+.landing-signup {
+  color: white;
+  h1,h2,h3,h4 {
+    margin-top: 0px;
+    margin-bottom: 4px;
+  }
+}
+
+/* --------------------- FOOTER FIX ---------------- */
+
 html,
 body {
   height: 100% !important;
@@ -39,6 +60,7 @@ div#wrap {
   height: 100%;
   /* Negative indent footer by it's height */
   margin: 0 auto -100px;
+  margin-bottom: 100px !important;
   padding-bottom: 60px !important;
 }
 
@@ -49,7 +71,8 @@ div#wrap {
   width: 100%;
 }
 #footer {
-  height: 60px;
+  border-top: 5px #454343 solid;
+  height: 40px;
 }
 #footer {
   background-color: white !important;
@@ -71,8 +94,9 @@ div#wrap {
 /* CUSTOMIZE THE IMAGES */
 
 div.marketing img.img-landing {
-  width: 350px;
+  width: 140px;
   height: auto;
+  margin-top: 0px;
 }
 
 /* CUSTOMIZE FOOTER */
@@ -100,8 +124,8 @@ div.marketing img.img-landing {
 
 /* Carousel base class */
 .carousel {
-  height: 500px;
-  margin-bottom: 60px;
+  height: 400px;
+  margin-bottom: 20px;
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
@@ -110,7 +134,7 @@ div.marketing img.img-landing {
 
 /* Declare heights because of positioning of img element */
 .carousel .item {
-  height: 500px;
+  height: 400px;
   background-color: #777;
 }
 .carousel-inner > .item > img {
@@ -118,7 +142,7 @@ div.marketing img.img-landing {
   top: 0;
   left: 0;
   min-width: 100%;
-  height: 500px;
+  height: 400px;
 }
 
 /* MARKETING CONTENT
@@ -131,7 +155,7 @@ div.marketing img.img-landing {
 }
 
 /* Center align the text within the three columns below the carousel */
-.marketing .col-lg-4 {
+div.marketing div {
   text-align: center;
   margin-bottom: 20px;
 }
@@ -180,14 +204,14 @@ div.marketing img.img-landing {
   }
 
   .featurette-heading {
-    font-size: 50px;
+    font-size: 30px;
   }
 
 }
 
 @media (min-width: 992px) {
   .featurette-heading {
-    margin-top: 120px;
+    margin-top: 75px;
   }
 }
 
@@ -210,3 +234,33 @@ div.row div.col-user {
     color: #D54F37;
   }
 } 
+
+.container {
+  width: 960px !important;
+}
+
+div.passenger-controls {
+  width: 30%;
+  display: inline-block !important;
+  p {
+    margin-bottom: 0px;
+  }
+}
+
+/* --------------- LANDING PAGE IMAGES ---------------*/
+
+span.search-results-option {
+  div {
+    border: 1px solid;
+    h3 {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      text-align: center;
+    }
+  }
+}
+
+.logo-home {
+  margin: 0 auto;
+}
+

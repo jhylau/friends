@@ -1,12 +1,13 @@
 source 'https://rubygems.org'
-ruby "2.0.0"
+ruby "1.9.3"
 
 gem 'rails', '3.2.13'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'pg'
+
+gem 'mysql2'
 gem 'devise'
 gem 'jquery-rails'
 gem 'json'
@@ -21,10 +22,20 @@ gem 'fancybox-rails'
 gem 'unicorn'
 gem 'unicorn-rails'
 gem 'omniauth-twitter'
-gem 'pry'
 gem 'less-rails'
 gem 'therubyracer'
 gem 'fb_graph'
+gem 'jquery-datatables-rails', git: 'git://github.com/rweng/jquery-datatables-rails.git'
+gem 'twitter', '~> 5.0.0'
+# gem 'tweetstream' will need to wait for update
+gem "sitemap_generator"
+gem 'newrelic_rpm'
+gem 'meta-tags', :require => 'meta_tags'
+gem 'hpricot'
+gem 'roadie'
+gem 'fastercsv'
+
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -39,6 +50,23 @@ end
 
 gem 'jquery-rails'
 
+group :development do
+  gem 'capistrano', :require => false
+  gem 'capistrano-ext', :require => false
+end
+
+group :test do
+  gem 'factory_girl_rails'
+  gem 'shoulda'
+  gem 'minitest'
+  gem 'mocha'
+end
+
+group :development, :test do
+  gem 'test-unit'
+  gem 'pry-rails'
+  gem 'pry-doc'
+end
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

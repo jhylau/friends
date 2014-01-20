@@ -1,0 +1,261 @@
+    <div class="carousel">
+      <!-- Indicators -->
+      <div class="carousel-inner">
+        <div class="item active">
+          <%= image_tag("landing_image.jpg", class: "landing-image") %>
+          <div class="container">
+            <%= form_for @flight_search, url: flights_path do |f| %>
+            <div class="row" id="flight_search">
+              <div class="col-xs-4">
+                <div class="thumbnail flight-search-thumbnail">
+                  <div class="caption">
+                    <h3>1 - Flight Destinations</h3>
+                    <div class="control-group flight-dates">
+                      <%= f.label :departure, "Departure", class: "control-label" %>
+                      <div class="controls">
+                        <div class="input-group">
+                          <span class="glyphicon glyphicon glyphicon-transfer input-group-addon"></span>
+                          <%= f.text_field :departure, value: nil, class: "form-control" %>
+                          <span class="input-group-btn">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">&nbsp;<span class="caret"></span></button>
+                            <ul class="dropdown-menu">
+                              <li><a class="departure">Manila</a></li>
+                              <li><a class="departure">Cebu</a></li>
+                              <li class="divider"></li>
+                              <li><a class="departure">XYZ</a></li>
+                            </ul>
+                          </span>
+                        </div>
+                      </div> 
+                    </div>
+
+                    <div class="control-group flight-dates">
+                      <%= f.label :arrival, "Arrival", class: "control-label" %>
+                      <div class="controls">
+                        <div class="input-group">
+                          <span class="glyphicon glyphicon glyphicon-transfer input-group-addon"></span>
+                          <%= f.text_field :arrival, value: nil, class: "form-control" %>
+                          <div class="input-group-btn">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">&nbsp;<span class="caret"></span></button>
+                            <ul class="dropdown-menu">
+                              <li><a class="arrival">Manila</a></li>
+                              <li><a class="arrival">Cebu</a></li>
+                              <li class="divider"></li>
+                              <li><a class="arrival">XYZ</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-4">
+                <div class="thumbnail flight-search-thumbnail">
+                  <div class="caption">
+                    <% fmt = "%m/%d/%Y" %>
+                    <% today = Date.today %>
+                    <h3>2 - Flight Dates</h3>
+                    <div class="control-group flight-dates">
+                      <%= f.label :flight_start, "Date of Departure", class: "control-label" %>
+
+                      <div class="controls">
+                        <div class="input-group">
+                          <span class="glyphicon glyphicon-calendar input-group-addon"></span>
+                          <%= f.text_field :flight_start, value: nil, class: "flight-date form-control" %>
+                        </div>
+                      </div> 
+                    </div>
+                    <div class="control-group flight-dates flight-search-thumbnail">
+                      <%= f.label :flight_end, "Date of Return", class: "control-label" %>
+                      <div class="controls">
+                        <div class="input-group">
+                          <span class="glyphicon glyphicon-calendar input-group-addon"></span>
+                          <%= f.text_field :flight_end, value: nil, class: "flight-date form-control" %>
+                        </div>
+                      </div> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-4">
+                <div class="thumbnail flight-search-thumbnail">
+                  <div class="caption">
+                    <h3>3 - Passengers 
+                      <span class="glyphicon glyphicon-user"></span>
+                    </h3>
+                    <div class="control-group passenger-controls">
+                      <%= f.label :adults, "Adults", class: "control-label" %>
+                      <p>12+</p>
+                      <div class="controls">
+                        <div class="input-group">
+                          <%= f.select :adults, 0..7, {:selected => 1}, {class: "styled-select" } %>
+                        </div>
+                      </div> 
+                    </div>
+                    <div class="control-group passenger-controls">
+                      <%= f.label :children, "Children", class: "control-label" %>
+                      <p>2-12</p>
+                      <div class="controls">
+                        <div class="input-group">
+                          <%= f.select :children, 0..7, {:selected => nil}, {class: "styled-select" } %>
+                        </div>
+                      </div> 
+                    </div>
+                    <div class="control-group passenger-controls">
+                      <%= f.label :infants, "Infants", class: "control-label" %>
+                      <p>0-2</p>
+                      <div class="controls">
+                        <div class="input-group">
+                          <%= f.select :infants, (0..4), {:selected => nil}, {class: "styled-select" } %>
+                        </div>
+                      </div> 
+                    </div>
+                    <div class="control-group">
+                      <button href="/flights" class="btn btn-primary" id="search" role="button"><span class="glyphicon glyphicon-search"></span> SEARCH</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- end row-->
+            <% end %>
+            <div class="row">
+              <div class="col-xs-12">
+                <div class="text-center landing-signup">
+                  <h3>Evolve Travel</h3>
+                  <h4>Sign up now for cheap airfares and hotel deals.</h4>
+                  <div class="input-group col-xs-4 col-xs-offset-4">
+                    <input type="text" class="form-control" placeholder="john@example.com">
+                    <span class="input-group-addon signup-addon">GO</span>
+                </div>
+              </div>
+            </div>  
+          </div>
+        </div>
+    </div>
+  </div><!-- /.carousel -->
+ <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+    <div class="container marketing">
+      <!-- Three columns of text below the carousel -->
+
+        <div class="row">
+          <h1>Latest Deals</h1>
+          <div class="col-xs-3">
+           <%= image_tag("flypal.jpeg",class:"img-circle img-landing" ) %>
+            <h2>FlyPAL</h2>
+            <p><%= Tweet.latest_results(Tweet::FLYPAL).text %></p>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-xs-3">
+            <%= image_tag("cebu_pac.jpg",class:"img-circle img-landing" ) %>
+            <h2>Cebu Pacific</h2>
+            <p><%= Tweet.latest_results(Tweet::CEBUPACIFICAIR).text %></a></p>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-xs-3">
+            <%= image_tag("air_asia.jpg",class:"img-circle img-landing" ) %>
+            <h2>Air Asia</h2>
+            <p><%= Tweet.latest_results(Tweet::AIRASIAPH).text %></a></p>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-xs-3">
+            <%= image_tag("tiger_air.jpeg",class:"img-circle img-landing" ) %>
+            <h2>Tiger Air</h2>
+            <p><%= Tweet.latest_results(Tweet::TIGERAIRPH).text %></a></p>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-xs-12">
+            <a class="btn btn-md btn-danger" href="/flight-deals">More Flight Deals</a>
+          </div>
+        </div><!-- /.row -->
+      <div class="row">
+        <h1>#1 Filipino Travel Website</h1>
+        <div class="col-xs-4">
+         <%= image_tag("bangkok_elephant.jpg",class:"img-circle img-landing" ) %>
+          <h2>Easy Comparisons</h2>
+          <p>See prices and schedules side by side.<br>All domestic filipino flights are listed along with thousands of local hotels</p>
+          <!-- <p><a class="btn btn-default" href="#" role="button">Learn more &raquo;</a></p> -->
+        </div><!-- /.col-lg-4 -->
+        <div class="col-xs-4">
+          <%= image_tag("family_backpack.jpg",class:"img-circle img-landing" ) %>
+          <h2>Best Deals</h2>
+          <p>Find the best deals and promotions on here so you can save for other things!</p>
+          <!-- <p><a class="btn btn-default" href="#" role="button">Learn more &raquo;</a></p> -->
+        </div><!-- /.col-lg-4 -->
+        <div class="col-xs-4">
+          <%= image_tag("singapore_skyline.jpg",class:"img-circle img-landing" ) %>
+          <h2>Domestic-International</h2>
+          <p>We cover both domestic Philippines and international flights and hotels<br></p>
+          <!-- <p><a class="btn btn-default" href="#" role="button">Plan tours &raquo;</a></p> -->
+        </div><!-- /.col-lg-4 -->
+      </div>
+
+
+      <!-- START THE FEATURETTES -->
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+
+        <div class="col-xs-7">
+          <h4 class="featurette-heading">"The best and easiest way to find flights and hotels in the Philippines.  Evolve Travel helped focus my time on what was important - enjoying our holiday!"<span class="text-muted"><br> - Jennfier Torres, UK</span></h4>
+          <p><a class="btn btn-default" href="#" role="button">Read more &raquo;</a></p>
+        </div>
+        <div class="col-xs-5">
+           <%= image_tag("singapore_skyline.jpg",class:"img-circle img-feature" ) %>
+        </div>
+      </div>
+
+<!--       <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-5">
+         <%= image_tag("singapore_skyline.jpg",class:"img-circle img-feature" ) %>
+        </div>
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Launching first in Hong Kong.<br>12 cities planned for 2014.<br><span class="text-muted">Traveling there won't be the same again.</span></h2>
+          <p><a class="btn btn-default" href="#" role="button">Learn more &raquo;</a></p>
+        </div>     
+      </div> -->
+
+      <!-- /END THE FEATURETTES -->
+
+
+      <!-- FOOTER -->
+     
+
+    <!-- </div>/.container
+</div> -->
+
+<script>
+$(document).ready(function() {
+  $('.flight-date').datepicker({
+    autoclose: true, 
+    format: 'mm/dd/yyyy',
+    changeMonth: true,
+    closeText: 'Done',
+    prevText: 'Prev',
+    nextText: 'Next',
+    currentText: 'Today',
+    monthNames: ['January','February','March','April','May','June',
+    'July','August','September','October','November','December'],
+    monthNamesShort: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+    'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+    dayNames: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+    dayNamesShort: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+    dayNamesMin: ['Su','Mo','Tu','We','Th','Fr','Sa'],
+    weekHeader: 'Wk',
+    dateFormat: 'dd/mm/yy',
+    firstDay: 1,
+    isRTL: false,
+    showMonthAfterYear: false,
+    yearSuffix: ''
+  });
+  $('a.departure').on("click",function() {
+    $('input#flight_search_departure').val($(this).text());
+  });
+  $('a.arrival').on("click",function() {
+    $('input#flight_search_arrival').val($(this).text());
+  });
+});
+</script>
+
+

@@ -6,12 +6,13 @@ div.row div.col-centered {
 div.navbar-fixed-top.navbar {
 	background-image: none;
 	background-color: white;
-	height: 80px;
+	height: 60px;
 	border-bottom: 10px #454343 solid;
 	a {
 		font-size: 200%;
 		text-shadow: none !important;
 		color: #454343;
+		vertical-align: top;
 		/*margin-top: 5%;*/
 	}
 	ul {
@@ -27,23 +28,11 @@ div.navbar-fixed-top.navbar {
 			
 			color: lightgrey;
 		}
-		}
+	}
 }
 
 div.navbar-header {
 	margin-top: 10px;
-}
-
-div.navbar-collapse {
-	margin-top: 10px;
-}
-
-.carousal-inner {
-	margin-bottom: 20px;
-}
-
-.marketing {
-	margin-top: 50px;
 }
 
 span.input-group-addon.signup-addon {
