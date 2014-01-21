@@ -288,6 +288,7 @@ GEM
       unicorn
     warden (1.2.3)
       rack (>= 1.0)
+    will_paginate (3.0.5)
     yard (0.8.7.3)
 
 PLATFORMS
@@ -331,3 +332,4 @@ DEPENDENCIES
   uglifier (>= 1.0.3)
   unicorn
   unicorn-rails
+  will_paginate

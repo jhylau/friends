@@ -35,6 +35,7 @@ gem 'meta-tags', :require => 'meta_tags'
 gem 'hpricot'
 gem 'roadie'
 gem 'fastercsv'
+gem 'will_paginate'
 
 
 # Gems used only for assets and not required

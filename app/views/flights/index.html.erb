@@ -64,7 +64,13 @@
 		  </span>
 		</div>
 	</div>
-	<table class="table table-striped table-bordered datatable">
+	<% if !@flights.empty? %>
+    <%
+      flight_params = {
+        :format => "json", :datatable => true, :all => params[:all]
+      }
+    %>
+	<table id="flights_datatable" class="table table-striped table-bordered" data-source="<%= flights_url(flight_params) %>">
 		<thead>
 		  <tr>
 		    <th>Airline</th>
@@ -72,32 +78,37 @@
 		    <th>Arrival</th>
 		    <th>Price ($)</th>
 		    <th>Duration</th>
-		    <th></th>
 		  </tr>
 		</thead>
 		<tbody>
-			<% fmt = "%m/%d/%Y" %>
-			<% @flights.each do |f| %>
-			  <tr>
-			    <td><%= Airline.find(f.airline_id).name %></td>
-			    <td><%= f.departure.strftime(fmt) %></td>
-			    <td><%= f.arrival.strftime(fmt) %></td>
-			    <td><%= f.price %></td>
-			    <td><%= f.duration %></td>
+		</tbody>
+			<%# fmt = "%m/%d/%Y" %>
+			<%# @flights.each do |f| %>
+			  <!-- <tr>
+			    <td><%#= Airline.find(f.airline_id).name %></td>
+			    <td><%#= f.departure.strftime(fmt) %></td>
+			    <td><%#= f.arrival.strftime(fmt) %></td>
+			    <td><%#= f.price %></td>
+			    <td><%#= f.duration %></td>
 			    <td><button href="/flight_searches" class="btn btn-danger" id="buy" role="button">BUY</button></td>
 			  </tr>
-			<% end %>
-		</tbody>
+			<%# end %>
+		</tbody> -->
 	</table>
 </div>
+<% end %>
 <script>
     $(document).ready(function() {
-		$('.datatable').dataTable({
+    	table_id = '#flights_datatable';
+		$(table_id).dataTable({
 		  "sPaginationType": "bootstrap",
 		  "bFilter": false,
 		  "bInfo": false,
 		  "bLengthChange": false,
-		  "bSortClasses": false 
+		  "bSortClasses": false,
+		  "bProcessing": true,
+		  "bServerSide": true,
+		  "sAjaxSource": $(table_id).data('source')
 		});
 		$('#airlines').on('click', function() {
 			var panels = ['time-panel','direct-transfer-panel','date-panel'];

@@ -10,10 +10,10 @@ require Rails.root.join('app/helpers','twitter_helper.rb')
 include TwitterHelper
 users = ['flypal', 'cebupacificair', 'tigerairph', 'airasiaph']
 
-Airline.create!(:name => "Cebu Pacific Air", :icao => "CEB", :iata => "5J", :twitter_user_id => 62452990, :twitter_screen_name => "cebupacificair", :call_sign => "CEBU" )
-Airline.create!(:name => "Tigerair Philippines", :icao => "SRQ", :iata => "DG", :twitter_user_id => 1545718316, :twitter_screen_name => "tigerair", :call_sign => "SEA TIGER" )
-Airline.create!(:name => "Philippine Airlines", :icao => "", :iata => "", :twitter_user_id => 54149214, :twitter_screen_name => "cebupacificair", :call_sign => "CEBU" )
-Airline.create!(:name => "Philippines AirAsia", :icao => "APG", :iata => "PQ", :twitter_user_id => 358100624, :twitter_screen_name => "airasiaph", :call_sign => "ZEST" )
+Airline.find_or_create_by_name!(:name => "Cebu Pacific Air", :icao => "CEB", :iata => "5J", :twitter_user_id => 62452990, :twitter_screen_name => "cebupacificair", :call_sign => "CEBU" )
+Airline.find_or_create_by_name!(:name => "Tigerair Philippines", :icao => "SRQ", :iata => "DG", :twitter_user_id => 1545718316, :twitter_screen_name => "tigerair", :call_sign => "SEA TIGER" )
+Airline.find_or_create_by_name!(:name => "Philippine Airlines", :icao => "", :iata => "", :twitter_user_id => 54149214, :twitter_screen_name => "cebupacificair", :call_sign => "CEBU" )
+Airline.find_or_create_by_name!(:name => "Philippines AirAsia", :icao => "APG", :iata => "PQ", :twitter_user_id => 358100624, :twitter_screen_name => "airasiaph", :call_sign => "ZEST" )
 
 
 client = TwitterIntegration.rest_client
@@ -24,5 +24,8 @@ tigerairph = rate_limit_timeline(client,"tigerairph").first
 airasiaph = rate_limit_timeline(client,"airasiaph").first
 
 users.each do |u|
-	Tweet.create!(:text => eval(u).text, :tweet_id => eval(u).id, :twitter_user_id => eval(u).user.id)
+	Tweet.find_or_create_by_tweet_id!(:text => eval(u).text, :tweet_id => eval(u).id, :twitter_user_id => eval(u).user.id)
 end
+
+#seed flights
+Flight.create!(:departure => DateTime.httpdate('Sat, 03 Feb 2001 04:05:06 GMT'), :arrival => DateTime.httpdate('Sat, 03 Feb 2001 04:05:06 GMT'), :price=>120, :airline_id=>1, :duration=>1)
