@@ -1,6 +1,6 @@
 module TweetViewHelper
 	def flypal_latest
-		Tweet.latest_results(Tweet::FLYPAL)
+		Tweet.latest_results(Tweet::FLYPAL).present? ? Tweet.latest_results(Tweet::FLYPAL).text : ''
 	end
 
 	def flypal_tweets
@@ -12,7 +12,7 @@ module TweetViewHelper
 	end
 
 	def cebupacificair_latest
-		Tweet.latest_results(Tweet::CEBUPACIFICAIR)
+		Tweet.latest_results(Tweet::CEBUPACIFICAIR).present? ? Tweet.latest_results(Tweet::CEBUPACIFICAIR).text : ''
 	end
 
 	def tigerairph_tweets
@@ -20,7 +20,7 @@ module TweetViewHelper
 	end
 
 	def tigerairph_latest
-		Tweet.latest_results(Tweet::TIGERAIRPH)
+		Tweet.latest_results(Tweet::TIGERAIRPH).present? ? Tweet.latest_results(Tweet::TIGERAIRPH).text : ''
 	end
 
 	def airasiaph_tweets
@@ -28,6 +28,6 @@ module TweetViewHelper
 	end
 
 	def airasiaph_latest
-		Tweet.latest_results(Tweet::AIRASIAPH)
+		Tweet.latest_results(Tweet::AIRASIAPH).present? ? Tweet.latest_results(Tweet::AIRASIAPH).text : ''
 	end
 end
