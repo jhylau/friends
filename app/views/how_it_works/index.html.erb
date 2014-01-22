@@ -1,12 +1,22 @@
+<% title "FAQ" %>
+<% description "Frequently Asked Questions for Evolve Travel, Cheap Flights and Hotels" %>
+<% keywords "FAQ, travel, Philippines, flights, hotels, deals, cheap" %>
+<% set_meta_tags :og => {
+  :title    => "FAQ",
+  :type     => 'product',
+  :url      => request.url,
+  :image    => image_path('og_logo.png')
+  }
+%>
 <div class="carousel">
     <div class="carousel-inner">
         <div class="item active">
-          <%= image_tag("landing_image.jpg", class: "landing-image") %>
+          <%= image_tag("landing_image.jpg", class: "landing-image", :alt => "Travel Background", :title => "Travel Background") %>
 		    <div class="container">
 			    <div class="row" id="how_it_works_row">
 			        <div class="col-xs-12">
 			            <div class="text-center" id='how_it_works'>
-	        	          <%= image_tag("logo_home.png") %>
+	        	          <%= image_tag("logo_home.png", :alt => "Evolve Travel", :title => "Evolve Travel") %>
 			              <h2>The easiest way to search domestic flights</h2>
 			          	</div>
 			        </div>  

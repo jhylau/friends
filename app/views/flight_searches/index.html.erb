@@ -1,8 +1,18 @@
+<% title "Flight Search" %>
+<% description "Flight Search for Evolve Travel, Cheap Flights and Hotels" %>
+<% keywords "flight search, travel, Philippines, flights, hotels, deals, cheap" %>
+<% set_meta_tags :og => {
+  :title    => "Flight Search",
+  :type     => 'product',
+  :url      => request.url,
+  :image    => image_path('og_logo.png')
+  }
+%>
     <div class="carousel">
       <!-- Indicators -->
       <div class="carousel-inner">
         <div class="item active">
-          <%= image_tag("landing_image.jpg", class: "landing-image") %>
+          <%= image_tag("landing_image.jpg", class: "landing-image", :alt => "Travel Background", :title => "Travel Background") %>
           <div class="container">
             <%= form_for @flight_search, url: flights_path do |f| %>
             <div class="row" id="flight_search">
@@ -142,22 +152,22 @@
         <div class="row">
           <h1>Latest Deals</h1>
           <div class="col-xs-3">
-           <%= image_tag("flypal.jpeg",class:"img-circle img-landing" ) %>
+           <%= image_tag("flypal.jpeg",class:"img-circle img-landing", alt: "Philippine Airlines", title: "Philippine Airlines" ) %>
             <h2>FlyPAL</h2>
             <p><%= flypal_latest %></p>
           </div><!-- /.col-lg-4 -->
           <div class="col-xs-3">
-            <%= image_tag("cebu_pac.jpg",class:"img-circle img-landing" ) %>
+            <%= image_tag("cebu_pac.jpg",class:"img-circle img-landing", alt: "Cebu Pacific Air", title: "Cebu Pacific Air" ) %>
             <h2>Cebu Pacific</h2>
             <p><%= cebupacificair_latest %></a></p>
           </div><!-- /.col-lg-4 -->
           <div class="col-xs-3">
-            <%= image_tag("air_asia.jpg",class:"img-circle img-landing" ) %>
+            <%= image_tag("air_asia.jpg",class:"img-circle img-landing", alt: "Air Asia Philippines", title: "Air Asia Philippines" ) %>
             <h2>Air Asia</h2>
             <p><%= airasiaph_latest %></a></p>
           </div><!-- /.col-lg-4 -->
           <div class="col-xs-3">
-            <%= image_tag("tiger_air.jpeg",class:"img-circle img-landing" ) %>
+            <%= image_tag("tiger_air.jpeg",class:"img-circle img-landing", alt: "Tiger Air Philippines", title: "Tiger Air Philippines" ) %>
             <h2>Tiger Air</h2>
             <p><%= tigerairph_latest %></a></p>
           </div><!-- /.col-lg-4 -->
@@ -168,19 +178,19 @@
       <div class="row">
         <h1>#1 Filipino Travel Website</h1>
         <div class="col-xs-4">
-         <%= image_tag("bangkok_elephant.jpg",class:"img-circle img-landing" ) %>
+         <%= image_tag("bangkok_elephant.jpg",class:"img-circle img-landing", alt: "Bangkok Elephant", title: "Bangkok Elephant" ) %>
           <h2>Easy Comparisons</h2>
           <p>See prices and schedules side by side.<br>All domestic filipino flights are listed along with thousands of local hotels</p>
           <!-- <p><a class="btn btn-default" href="#" role="button">Learn more &raquo;</a></p> -->
         </div><!-- /.col-lg-4 -->
         <div class="col-xs-4">
-          <%= image_tag("family_backpack.jpg",class:"img-circle img-landing" ) %>
+          <%= image_tag("family_backpack.jpg",class:"img-circle img-landing", alt: "Family Backpack", title: "Family Backpack"  ) %>
           <h2>Best Deals</h2>
           <p>Find the best deals and promotions on here so you can save for other things!</p>
           <!-- <p><a class="btn btn-default" href="#" role="button">Learn more &raquo;</a></p> -->
         </div><!-- /.col-lg-4 -->
         <div class="col-xs-4">
-          <%= image_tag("singapore_skyline.jpg",class:"img-circle img-landing" ) %>
+          <%= image_tag("singapore_skyline.jpg",class:"img-circle img-landing", alt: "Singapore Skyline", title: "Singapore Skyline"  ) %>
           <h2>Domestic-International</h2>
           <p>We cover both domestic Philippines and international flights and hotels<br></p>
           <!-- <p><a class="btn btn-default" href="#" role="button">Plan tours &raquo;</a></p> -->
