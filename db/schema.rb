@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140118040204) do
+ActiveRecord::Schema.define(:version => 20140123233010) do
 
   create_table "airlines", :force => true do |t|
     t.string  "name"
@@ -20,6 +20,15 @@ ActiveRecord::Schema.define(:version => 20140118040204) do
     t.string  "call_sign"
     t.string  "twitter_screen_name"
     t.integer "twitter_user_id",     :limit => 8
+  end
+
+  create_table "airports", :force => true do |t|
+    t.string "icao"
+    t.string "iata"
+    t.string "name"
+    t.string "province"
+    t.string "city"
+    t.string "classification"
   end
 
   create_table "flight_searches", :force => true do |t|

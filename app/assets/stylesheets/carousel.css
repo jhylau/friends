@@ -22,6 +22,6 @@ div.flight-search-thumbnail {
   height: 200px;
 }
 
-.carousal-inner {
-  margin-bottom: 20px;
+div.carousel-inner {
+  overflow: visible !important;
 }

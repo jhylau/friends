@@ -275,6 +275,16 @@ span.search-results-option {
 .logo-home {
   margin: 0 auto;
 }
+/* --------------- FLIGHT SEARCH ---------------*/
+
+ul#airport-select {
+  margin-left: -225px;
+  width: 900px;
+  height: 550px;
+  li {
+    width: 25%; float: left;
+  }
+}
 
 /* --------------- FLIGHT SEARCH RESULTS ---------------*/
 div#airline-panel {

@@ -1,0 +1,86 @@
+City,Province,IATA,ICAO,Name,Classification
+Silay,Negros Occidental,BCD,RPVB,Bacolod-Silay International Airport,International
+Angeles,Pampanga,CRK,RPLC (RPMK),Clark International Airport,International
+Davao City,Davao del Sur,DVO,RPMD (RPWD),Francisco Bangoy (Davao) International Airport,International
+General Santos,South Cotabato,GES,RPMR,General Santos International (Tambler) Airport,International
+Cabatuan,Iloilo,ILO,RPVI,Iloilo International Airport,International
+Kalibo,Aklan,KLO,RPVK,Kalibo International Airport,International
+Laguindingan,Misamis Oriental,CGY,RPMY,Laguindingan International Airport,International
+Laoag,Ilocos Norte,LAO,RPLI,Laoag International Airport,International
+Lapu-Lapu,Cebu,CEB,RPVM,Mactan-Cebu International Airport,International
+Parañaque/Pasay,Metro Manila,MNL,RPLL (RPMM),Ninoy Aquino (Manila) International Airport,International
+Puerto Princesa,Palawan,PPS,RPVP,Puerto Princesa International Airport,International
+Morong,Bataan,SFS,RPLB (RPMB),Subic Bay International Airport,International
+Zamboanga City,Zamboanga del Sur,ZAM,RPMZ,Zamboanga International Airport,International
+Butuan,Agusan del Norte,BXU,RPME (RPWE),Bancasi (Butuan) Airport,Principal-Class 1
+Cotabato City,Maguindanao,CBO,RPMC (RPWC),Awang (Cotabato) Airport,Principal-Class 1
+Dipolog,Zamboanga del Norte,DPL,RPMG (RPWG),Dipolog Airport,Principal-Class 1
+Sibulan,Negros Oriental,DGT,RPVD,Sibulan (Dumaguete) Airport,Principal-Class 1
+Legazpi,Albay,LGP,RPLP,Legazpi Airport,Principal-Class 1
+Pili,Camarines Sur,WNP,RPUN,Naga (Pili) Airport,Principal-Class 1
+Pagadian,Zamboanga del Sur,PAG,RPMP (RPWP),Pagadian Airport,Principal-Class 1
+Roxas,Capiz,RXS,RPVR,Roxas Airport,Principal-Class 1
+San Jose,Occidental Mindoro,SJI,RPUH,San Jose Airport,Principal-Class 1
+Tacloban,Leyte,TAC,RPVA,Daniel Z. Romualdez (Tacloban) Airport,Principal-Class 1
+Tagbilaran,Bohol,TAG,RPVT,Tagbilaran Airport,Principal-Class 1
+Tuguegarao,Cagayan,TUG,RPUT,Tuguegarao Airport,Principal-Class 1
+San Jose de Buenavista,Antique,EUQ,RPVS,Evelio Javier (Antique) Airport,Principal-Class 2
+Baguio,Benguet,BAG,RPUB,Loakan (Baguio) Airport,Principal-Class 2
+Basco,Batanes,BSO,RPUO,Basco Airport,Principal-Class 2
+Bongao,Tawi-Tawi,SGS (TWT),RPMN (RPWN),Sanga-Sanga (Tawi-Tawi) Airport,Principal-Class 2
+Coron,Palawan,USU,RPVV,Francisco B. Reyes (Busuanga-Coron) Airport,Principal-Class 2
+Calbayog,Samar,CYP,RPVC,Calbayog Airport,Principal-Class 2
+Mambajao,Camiguin,CGM,RPMH,Camiguin Airport,Principal-Class 2
+Catarman,Northern Samar,CRM,RPVF,Catarman National Airport,Principal-Class 2
+Malay,Aklan,MPH,RPVE,Godofredo P. Ramos (Caticlan) Airport,Principal-Class 2
+Magsaysay,Palawan,CYU,RPLO (RPCU),Cuyo Airport,Principal-Class 2
+Jolo,Sulu,JOL,RPMJ (RPWJ),Jolo Airport,Principal-Class 2
+Gasan,Marinduque,MRQ,RPUW,Marinduque Airport,Principal-Class 2
+Masbate City,Masbate,MBT,RPVJ,Moises R. Espinosa (Masbate) Airport,Principal-Class 2
+Ormoc,Leyte,OMC,RPVO,Ormoc Airport,Principal-Class 2
+Alcantara,Romblon,TBH,RPVU,Tugdan (Romblon) Airport,Principal-Class 2
+Del Carmen,Surigao del Norte,IAO (SOS),RPNS (RPSI),Sayak (Siargao) Airport,Principal-Class 2
+Surigao,Surigao del Norte,SUG,RPMS (RPWS),Surigao Airport,Principal-Class 2
+Tandag,Surigao del Sur,TDG,RPMW (RPWW),Tandag Airport,Principal-Class 2
+Virac,Catanduanes,VRC,RPUV,Virac Airport,Principal-Class 1
+Perez,Quezon,,RPLY (RPXT),Alabat Airport,Community
+Surallah,South Cotabato,AAV,RPMA (RPWA),Allah Valley Airport,Community
+Bagabag,Nueva Vizcaya,,RPUZ,Bagabag Airport,Community
+San Luis,Aurora,BQA,RPUR,Dr. Juan C. Angara (Baler) Airport,Community
+Santa Fe,Cebu,,RPSB,Bantayan Airport,Community
+Naval,Biliran,,RPVQ (RPNA),Biliran Airport,Community
+Bislig,Surigao del Sur,BPH,RPMF (RPWZ),Bislig Airport,Community
+Borongan,Eastern Samar,BPR,RPVW,Borongan (Punta Maria) Airport,Community
+Bulan,Sorsogon,,RPUU,Bulan Airport,Community
+Calapan,Oriental Mindoro,CPP,RPUK,Calapan Airport,Community
+Mapun,Tawi-Tawi,CDY,RPMU,Cagayan de Sulu (Mapun) Airport,Community
+Catbalogan,Samar,,RPVY (RPCA),Catbalogan Airport,Community
+Cauayan,Isabela,CYZ,RPUY,Cauayan Airport,Community
+Daet,Camarines Norte,DTE,RPUD,Bagasbas (Daet) Airport,Community
+Guiuan,Eastern Samar,,RPVG,Guiuan Airport,Community
+Hilongos,Leyte,,RPVH,Hilongos Airport,Community
+Iba,Zambales,,RPUI,Iba Airport,Community
+Baloi,Lanao del Norte,IGN,RPMI (RPWX),Maria Cristina (Iligan) Airport,Community
+Ipil,Zamboanga Sibugay,IPE,RPMV,Ipil Airport,Community
+Itbayat,Batanes,,RPLT (RPXI),Itbayat Airport,Community
+Jomalig,Quezon,,RPLJ (RPXJ),Jomalig Airport,Community
+Liloy,Zamboanga del Norte,,RPMX,Liloy Airport,Community
+Lingayen,Pangasinan,,RPUG,Lingayen Airport,Community
+Lubang,Occidental Mindoro,LBX,RPLU (RPXG),Lubang Airport,Community
+Maasin,Southern Leyte,,RPSM,Panan-awan (Maasin) Airport,Community
+Malabang,Lanao del Sur,MLP,RPMM (RPWM),Malabang Airport,Community
+Mamburao,Occidental Mindoro,MBO,RPUM,Mamburao Airport,Community
+Mansalay,Oriental Mindoro,,RPLG,Wasig (Mansalay) Airport,Community
+Mati,Davao Oriental,MXI,RPMQ,Mati Airport (formerly Imelda R. Marcos) Airport,Community
+Ozamiz,Misamis Occidental,OZC,RPMO (RPWI),Labo (Ozamiz) Airport,Community
+Palanan,Isabela,,RPLN (RPPA),Palanan Airport,Community
+Pinamalayan,Oriental Mindoro,,RPLA,Pinamalayan Airport,Community
+Plaridel,Bulacan,,RPUX,Plaridel Airport,Community
+Rosales,Pangasinan,,RPLR,Rosales Airport,Community
+San Fernando,La Union,SFE,RPUS,San Fernando (Poro Point) Airport,Community
+Siocon,Zamboanga del Norte,XSO,RPNO,Siocon Airport,Community
+Siquijor,Siquijor,,RPVZ (RPSQ),Siquijor Airport,Community
+Sorsogon City,Sorsogon,,RPLZ (RPXU),Sorsogon (Gabao/Bacon) Airport,Community
+Ubay,Bohol,,RPSN (RPBY),Ubay Airport,Community
+Vigan,Ilocos Sur,VGN,RPUQ,Mindoro (Vigan) Airport,Community
+Wao,Lanao del Sur,,,Wao Airport,Community

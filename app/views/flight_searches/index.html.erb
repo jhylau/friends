@@ -26,15 +26,7 @@
                         <div class="input-group">
                           <span class="glyphicon glyphicon glyphicon-transfer input-group-addon"></span>
                           <%= f.text_field :departure, value: nil, class: "form-control" %>
-                          <span class="input-group-btn">
-                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">&nbsp;<span class="caret"></span></button>
-                            <ul class="dropdown-menu">
-                              <li><a class="departure">Manila</a></li>
-                              <li><a class="departure">Cebu</a></li>
-                              <li class="divider"></li>
-                              <li><a class="departure">XYZ</a></li>
-                            </ul>
-                          </span>
+                          <%= render :partial => "flight_searches/airports" %>
                         </div>
                       </div> 
                     </div>
@@ -45,15 +37,7 @@
                         <div class="input-group">
                           <span class="glyphicon glyphicon glyphicon-transfer input-group-addon"></span>
                           <%= f.text_field :arrival, value: nil, class: "form-control" %>
-                          <div class="input-group-btn">
-                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">&nbsp;<span class="caret"></span></button>
-                            <ul class="dropdown-menu">
-                              <li><a class="arrival">Manila</a></li>
-                              <li><a class="arrival">Cebu</a></li>
-                              <li class="divider"></li>
-                              <li><a class="arrival">XYZ</a></li>
-                            </ul>
-                          </div>
+                          <%= render :partial => "flight_searches/airports" %>
                         </div>
                       </div> 
                     </div>
@@ -256,13 +240,22 @@ $(document).ready(function() {
     firstDay: 1,
     isRTL: false,
     showMonthAfterYear: false,
-    yearSuffix: ''
+    yearSuffix: '',
+    orientation: 'auto'
   });
   $('a.departure').on("click",function() {
     $('input#flight_search_departure').val($(this).text());
   });
   $('a.arrival').on("click",function() {
     $('input#flight_search_arrival').val($(this).text());
+  });
+  $('#flight_search_departure').on('click',function() {
+       $(this).datepicker("hide");
+     };
+  });
+  $('#flight_search_arrivals').on('click',function() {
+       $(this).datepicker("hide");
+     };
   });
 });
 </script>
