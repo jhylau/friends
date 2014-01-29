@@ -99,11 +99,12 @@
 			    <td><%#= f.departure.strftime(fmt) %></td>
 			    <td><%#= f.arrival.strftime(fmt) %></td>
 			    <td><%#= f.price %></td>
-			    <td><%#= f.duration %></td>
-			    <td><button href="/flight_searches" class="btn btn-danger" id="buy" role="button">BUY</button></td>
-			  </tr>
+			    <td><%#= f.duration %>
+			    <a class='pull-right'><button href="/flight_searches" class="btn btn-danger" id="buy" role="button">BUY</button></a>
+				</td>
+			  </tr> -->
 			<%# end %>
-		</tbody> -->
+		</tbody>
 	</table>
 </div>
 <% end %>

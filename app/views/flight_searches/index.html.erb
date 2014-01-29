@@ -26,7 +26,7 @@
                         <div class="input-group">
                           <span class="glyphicon glyphicon glyphicon-transfer input-group-addon"></span>
                           <%= f.text_field :departure, value: nil, class: "form-control" %>
-                          <%= render :partial => "flight_searches/airports" %>
+                          <%= render :partial => "flight_searches/airports", :locals => { :type => "departure" } %>
                         </div>
                       </div> 
                     </div>
@@ -37,7 +37,7 @@
                         <div class="input-group">
                           <span class="glyphicon glyphicon glyphicon-transfer input-group-addon"></span>
                           <%= f.text_field :arrival, value: nil, class: "form-control" %>
-                          <%= render :partial => "flight_searches/airports" %>
+                          <%= render :partial => "flight_searches/airports" , :locals => { :type => "arrival" }%>
                         </div>
                       </div> 
                     </div>
@@ -56,7 +56,7 @@
                       <div class="controls">
                         <div class="input-group">
                           <span class="glyphicon glyphicon-calendar input-group-addon"></span>
-                          <%= f.text_field :flight_start, value: nil, class: "flight-date form-control" %>
+                          <%= f.text_field :flight_start, value: nil, class: "flight-date-start form-control" %>
                         </div>
                       </div> 
                     </div>
@@ -65,7 +65,7 @@
                       <div class="controls">
                         <div class="input-group">
                           <span class="glyphicon glyphicon-calendar input-group-addon"></span>
-                          <%= f.text_field :flight_end, value: nil, class: "flight-date form-control" %>
+                          <%= f.text_field :flight_end, value: nil, class: "flight-date-end form-control" %>
                         </div>
                       </div> 
                     </div>
@@ -220,7 +220,7 @@
 
 <script>
 $(document).ready(function() {
-  $('.flight-date').datepicker({
+  $('.flight-date-start').datepicker({
     autoclose: true, 
     format: 'mm/dd/yyyy',
     changeMonth: true,
@@ -241,7 +241,30 @@ $(document).ready(function() {
     isRTL: false,
     showMonthAfterYear: false,
     yearSuffix: '',
-    orientation: 'auto'
+    orientation: 'auto top'
+  });
+   $('.flight-date-end').datepicker({
+    autoclose: true, 
+    format: 'mm/dd/yyyy',
+    changeMonth: true,
+    closeText: 'Done',
+    prevText: 'Prev',
+    nextText: 'Next',
+    currentText: 'Today',
+    monthNames: ['January','February','March','April','May','June',
+    'July','August','September','October','November','December'],
+    monthNamesShort: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+    'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+    dayNames: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+    dayNamesShort: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+    dayNamesMin: ['Su','Mo','Tu','We','Th','Fr','Sa'],
+    weekHeader: 'Wk',
+    dateFormat: 'dd/mm/yy',
+    firstDay: 1,
+    isRTL: false,
+    showMonthAfterYear: false,
+    yearSuffix: '',
+    orientation: 'auto top'
   });
   $('a.departure').on("click",function() {
     $('input#flight_search_departure').val($(this).text());
@@ -251,13 +274,11 @@ $(document).ready(function() {
   });
   $('#flight_search_departure').on('click',function() {
        $(this).datepicker("hide");
-     };
   });
   $('#flight_search_arrivals').on('click',function() {
        $(this).datepicker("hide");
-     };
   });
-});
+})
 </script>
 
 
