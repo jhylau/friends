@@ -1,4 +1,4 @@
- <div class="input-group-btn" id="airport-select-div">
+ <div class="input-group-btn airport-select-div" id="airports-<%=type%>">
     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
     <ul class="dropdown-menu" id="airport-select">
       <% Airport.order('city ASC').all.each do |a| %>

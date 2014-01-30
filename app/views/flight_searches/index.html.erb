@@ -275,8 +275,35 @@ $(document).ready(function() {
   $('#flight_search_departure').on('click',function() {
        $(this).datepicker("hide");
   });
+  $('#flight_search_departure').keyup(function() {
+    var filter = $(this).val();
+    var count = 0;
+    $("ul li a.departure").each(function() {
+        if ($(this).text().search(new RegExp(filter, "i")) < 0) {
+            $(this).hide();
+        } else {
+            $(this).show();
+            count = count + 1;
+        }
+        $("div#airports-departure").addClass('open');
+    });
+  });
   $('#flight_search_arrivals').on('click',function() {
        $(this).datepicker("hide");
+       $(this).next('div.input-group-btn').toggleClass('open');
+  });
+  $('#flight_search_arrival').keyup(function() {
+    var filter = $(this).val();
+    var count = 0;
+    $("ul li a.arrival").each(function() {
+        if ($(this).text().search(new RegExp(filter, "i")) < 0) {
+            $(this).hide();
+        } else {
+            $(this).show();
+            count = count + 1;
+        }
+        $("div#airports-arrival").addClass('open');
+    });
   });
 })
 </script>

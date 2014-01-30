@@ -277,11 +277,11 @@ span.search-results-option {
 }
 /* --------------- FLIGHT SEARCH ---------------*/
 
-div#airport-select-div {
+div.airport-select-div {
   position: static !important;
   ul#airport-select {
     width: 900px;
-    height: 550px;
+    height: auto;
     li {
       width: 25%; float: left;
     }
