@@ -28,6 +28,7 @@ gem 'therubyracer'
 gem 'fb_graph'
 gem 'jquery-datatables-rails', git: 'git://github.com/rweng/jquery-datatables-rails.git'
 gem 'twitter', '~> 5.0.0'
+gem 'pg'
 # gem 'tweetstream' will need to wait for update
 gem "sitemap_generator"
 gem 'newrelic_rpm'
