@@ -1,5 +1,5 @@
 class AddAirports < ActiveRecord::Migration
-    def change
+    def up
 	  	create_table :airports do |t|
 	  		t.string :icao
 	  		t.string :iata
@@ -8,5 +8,10 @@ class AddAirports < ActiveRecord::Migration
 		    t.string :city
 		    t.string :classification
 	  	end
+		Rake::Task['database:load_airports'].invoke	
+	end
+
+	def down
+		drop_table :airports
 	end
 end
